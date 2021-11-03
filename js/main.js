@@ -1,3 +1,3 @@
 function gamestart(){
-	location.href="stage1.html";
+	location.href="stages/stage1.html";
 }
