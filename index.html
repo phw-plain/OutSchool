@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="js/main.js"></script> 
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/audio.css">
+	<script type="text/javascript" src="js/main.js"></script>
 	<title>OutSchool</title>
-	<style type="text/css">
-	.menu{
-		margin-top: 15px;
-		text-align: center;
-		width: 200px;
-		font-size: 22px;
-		color: #5f6368;
-		border: solid 1px #dadce0;
-		border-radius: 1vw;
-		padding: 6px 8px 6px 8px; 
-		cursor: pointer;
-	}
-	.menu:hover{
-		color: red;
-	}
-	</style>
 </head>
 <body>
-	<h1 style="text-align:center; font-size: 100px
-		; margin-top: 150px;" >OutSchool</h1>
+	<button id="bgmPlay" class="bgm">
+		<img class="bgm_img" src="icon/bgmOn.png" alt="Sound On">
+	</button> 
+	<button id="bgmStop" class="bgm">
+		<img class="bgm_img" src="icon/bgmOff.png" alt="Sound Off">
+	</button>
+	<br>
+	<h1 style="text-align:center; font-size: 100px;">OutSchool</h1>
+
 	<div style="text-align: -webkit-center;
-		margin-top: 250px;">
+		margin-top: 100px;">
 		<div class="menu" onclick="gamestart()">게임 시작</div>
 		<div class="menu">게임 랭킹</div>
 		<div class="menu">게임 방법</div>	
 	</div>
-	<br><br><br><br><br><br><br><br><br><br>
-	<a href="stages/stage1.html">stage1 이동</a>&nbsp;
-	<a href="stages/stage2.html">stage2 이동</a>&nbsp;
-</body>
+	
+</body>	
+	<script type="text/javascript" src="js/audio.js"></script>  
 </html>

@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" href="../css/character.css">
 	<link rel="stylesheet" href="../css/stage.css">
+	<script type="text/javascript" src="../js/stage.js"></script>
 	<title>OutSchool</title>
 </head>
 <style type="text/css">
@@ -19,14 +20,7 @@
 		justify-content: space-between;
 	}
 </style>
-<script>
-	function die(){
-		location.href="../GameOver.html";
-	}
-	function nextstage(){
-		location.href="stage2.html"
-	}
-</script>
+
 <body>
 	<h1>Stage 1</h1>
 	<div class="leafs">
@@ -67,4 +61,9 @@
 		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../img/leaf.png" /></div>
 	</div>
 </body>
+<script>
+	function nextstage(){
+		location.href="stage2.html"
+	}
+</script>
 </html>
