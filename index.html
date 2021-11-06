@@ -2,27 +2,22 @@
 <html>
 <head>
 	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/audio.css">
-	<script type="text/javascript" src="js/main.js"></script>
 	<title>OutSchool</title>
 </head>
 <body>
-	<button id="bgmPlay" class="bgm">
-		<img class="bgm_img" src="icon/bgmOn.png" alt="Sound On">
-	</button> 
-	<button id="bgmStop" class="bgm">
-		<img class="bgm_img" src="icon/bgmOff.png" alt="Sound Off">
-	</button>
-	<br>
-	<h1 style="text-align:center; font-size: 100px;">OutSchool</h1>
-
-	<div style="text-align: -webkit-center;
-		margin-top: 100px;">
-		<div class="menu" onclick="gamestart()">게임 시작</div>
-		<div class="menu">게임 랭킹</div>
-		<div class="menu">게임 방법</div>	
-	</div>
-	
+    <div class="main" style="position: absolute;">
+        <button id="bgmPlay" class="bgm">
+            <img class="bgm_img" src="icon/bgmOn.png" alt="Sound On">
+        </button> 
+        <button id="bgmStop" class="bgm">
+            <img class="bgm_img" src="icon/bgmOff.png" alt="Sound Off">
+        </button>
+    </div>
+	<iframe width="100%" src="Gamestart.html" frameborder="0"></iframe>
 </body>	
-	<script type="text/javascript" src="js/audio.js"></script>  
+    <script type="text/javascript" src="js/audio.js"></script>  
+    <script>
+        frame1 = document.body.querySelector('iframe')
+        frame1.style.height = `${window.innerHeight}px`
+    </script>
 </html>

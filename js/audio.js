@@ -13,6 +13,8 @@ const bgmStop = document.getElementById("bgmStop");
 bgmStop.onclick = function () { 
     bgmPlay.style.display = 'block';
     bgmStop.style.display = 'none';
+    // 임시 추가
+    // document.body.querySelector('.main').style.display = "none";
     player.play();
 }
 // 정지 버튼 

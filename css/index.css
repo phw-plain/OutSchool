@@ -1,15 +1,23 @@
-
-.menu{
-    margin-top: 15px;
-    text-align: center;
-    width: 200px;
-    font-size: 22px;
-    color: #5f6368;
-    border: solid 1px #dadce0;
-    border-radius: 1vw;
-    padding: 6px 8px 6px 8px; 
+body{
+    background-image: url("../img/main1.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0px;
+}
+.bgm .bgm_img {
+    width: 50px;
+    height: 50px;
+}
+.bgm {
+    background-color: rgba( 255, 255, 255, 0 );
+    border-style: none;
     cursor: pointer;
 }
-.menu:hover{
-    color: red;
+#bgmPlay {
+    display: none;
+}
+.main {
+    top: 15px;
+    right: 15px;
 }

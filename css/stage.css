@@ -1,3 +1,15 @@
+html{
+    cursor:url("test"), auto;
+}
 body{
-		text-align: -webkit-center;
-	}
+	text-align: -webkit-center;
+	background-color: white;
+	overflow: hidden;
+}
+.character {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+}
