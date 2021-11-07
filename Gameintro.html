@@ -2,18 +2,26 @@
     <script>
         setTimeout(function() {
             location.href="GameStart.html";
-        }, 6000);
+        }, 8000);
         
         setTimeout(function(){
-            document.body.classList.add('blind')
-        }, 2000);
-        
+            document.body.classList.add('blind1')
+        }, 1000);
+
+        setTimeout(function(){
+            document.body.classList.add('blind2')
+        }, 4000);
     </script>
     <style>
         body{
-            background: rgb(255, 255, 255)
+            background: rgb(0, 0, 0)
         }
-        .blind{
+        .blind1{
+            background: rgb(255, 255, 255);
+            -webkit-transition: 5s;
+            transition: 5s;
+        }
+        .blind2{
             background: rgb(0, 0, 0);
             -webkit-transition: 5s;
             transition: 5s;
