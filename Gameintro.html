@@ -1,0 +1,32 @@
+<html>
+    <script>
+        setTimeout(function() {
+            location.href="GameStart.html";
+        }, 6000);
+        
+        setTimeout(function(){
+            document.body.classList.add('blind')
+        }, 2000);
+        
+    </script>
+    <style>
+        body{
+            background: rgb(255, 255, 255)
+        }
+        .blind{
+            background: rgb(0, 0, 0);
+            -webkit-transition: 5s;
+            transition: 5s;
+        }
+        .title{
+            display: flex;
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+        }
+    </style>
+    <body>
+        <h1 class="title">Mirim Project</h1>
+    </body>
+</html>
