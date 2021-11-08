@@ -45,6 +45,12 @@
 		*/
 	</script>
 	<style type="text/css">
+		body {
+			background-image: url("../img/stage2.png");
+			background-size: cover; 
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
 		#ai2{
 			margin-top: 300px;
 		}
@@ -53,9 +59,9 @@
 <body onload="init()">
 	<h1>Stage 2</h1>
 	<!-- <input type="button" value="자동멈춤" onclick="toStop()"> -->
-	<img onmouseover="die()" id="ai1" src="../img/test.jpg" style="position: absolute;top: 50px; left: 10px;">
+	<img onmouseover="die()" id="ai1" src="../img/ai.gif" style="position: absolute;top: 50px; left: 10px;">
 
-	<img class="ai2" onmouseover="die()" id="ai2" src="../img/test.jpg" style="position: absolute;top: 50px; left: 10px;">
+	<img class="ai2" onmouseover="die()" id="ai2" src="../img/ai.gif" style="position: absolute;top: 50px; left: 10px;">
 	<div class="character"><img src="../img/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
