@@ -7,7 +7,6 @@
 	<script type="text/javascript" src="../js/stage.js"></script>
 	<title>OutSchool</title>
 	<script type="text/javascript">
-
 		var x1 = 10;
 		var x2 = 1000;
 		var step1 = 10;
@@ -58,11 +57,14 @@
 </head>
 <body onload="init()">
 	<h1>Stage 2</h1>
+	<div class="clear" onmouseover="nextstage(3)" style="color:red; width: 100px; position:absolute; margin-top: 10%; right: 10px">
+		클리어!!
+	</div>
 	<!-- <input type="button" value="자동멈춤" onclick="toStop()"> -->
-	<img onmouseover="die()" id="ai1" src="../img/ai.gif" style="position: absolute;top: 50px; left: 10px;">
+	<img onmouseover="die()" id="ai1" src="../icon/ai.gif" style="position: absolute;top: 50px; left: 10px;">
 
-	<img class="ai2" onmouseover="die()" id="ai2" src="../img/ai.gif" style="position: absolute;top: 50px; left: 10px;">
-	<div class="character"><img src="../img/chracter.gif"></div>
+	<img class="ai2" onmouseover="die()" id="ai2" src="../icon/ai.gif" style="position: absolute;top: 50px; left: 1000px;">
+	<div class="character"><img src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
 </html>
