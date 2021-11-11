@@ -1,15 +1,74 @@
-html{
-    cursor:url("test"), auto;
-}
 body{
+	background-size: cover; 
+	background-repeat: no-repeat;
 	text-align: -webkit-center;
-	background-color: white;
 	overflow: hidden;
+	cursor:none;
 }
+/* 마우스 캐릭터*/
 .character {
 	position: absolute;
 	pointer-events: none;
 	top: 0;
 	left: 0;
 	transform: translate(-50%, -50%);
+}
+/* 현재 위치 - stage 화면 좌측 상단*/
+.subtitle{
+	position: absolute;
+	float: left;
+	border: 2px solid black;
+}
+.place{
+	display: inline-block; 
+	padding-top: 7px;
+	padding-bottom: 7px;
+
+}
+.p1 {
+	border-right: 2.5px solid black;
+	background-color: rgb(98, 207, 98);
+}
+.p2{
+	padding-left: 20px;
+	padding-right: 25px;
+}
+/* 다음 스테이지로 */
+.next{
+	position:absolute; 
+	margin-top: 300px;
+	color:red; 
+}
+/* stage 1 */
+.img_desk{
+	width: 250px; 
+	height: 250px;
+}
+.desk {
+	cursor: pointer;
+}
+.desks{
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+.s_table{
+	width: 250px;
+	height: 250px;
+}
+.top{
+	margin-right: 300px;
+}
+.hole{
+	position: absolute;
+	width: 500px; 
+}
+.pin{
+	position: absolute;
+	width: 300px; 
+}
+.trash{
+	position: absolute;
+	width: 70px; 
+	height: 70px;
 }

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="../css/character.css">
 	<link rel="stylesheet" href="../css/stage.css">
 	<script type="text/javascript" src="../js/stage.js"></script>
 	<title>OutSchool</title>
@@ -9,68 +8,36 @@
 <style type="text/css">
 	body {
 		background-image: url("../img/stage1.png");
-		background-size: cover; 
-		background-repeat: no-repeat;
-    	overflow: hidden;
-	}
-	.img_leaf{
-		width: 250px; 
-		height: 250px;
-	}
-	.leaf {
-		cursor: pointer;
-	}
-	.leafs{
-		margin-bottom: 80px;
-		display: flex;
-		justify-content: space-between;
-	}
-	.s_table{
-		width: 250px;
-		height: 250px;
-	}
-	.top{
-		margin-right: 300px;
-	}
-	.trash{
-		position: absolute;
-		width: 70px; 
-		height: 70px;
 	}
 </style>
-
 <body>
-	<h1>Stage 1</h1>
+	<div class="subtitle">
+        <div class="place p1">현재 위치</div>
+        <div class="place p2">교실</div>
+    </div>
 	<div class="top">
 		<img class="s_table"src="../icon/teacher.gif">
 		<img class="s_table a"src="../icon/schooltable.png">
 	</div>
 	<div>
-		<div onmouseover="die()">
-			<img class="trash" src="../icon/trash1.png" style="top: 900px; right:300px;">
-		</div>
-		<div onmouseover="die()">
-			<img class="trash" src="../icon/trash2.png" style="top: 700px; right:500px;">
-		</div>
-		<div onmouseover="die()">
-			<img class="trash" src="../icon/trash3.png" style="top: 500px; right:400px;">
-		</div>
+		<div onmouseover="die()"><img class="hole" src="../icon/hole.png" style="top: 450px; right:67%;"></div>
+		<div onmouseover="die()"><img class="pin" src="../icon/pin.png" style="top: 700px; right:43%;"></div>
+		<div onmouseover="die()"><img class="trash" src="../icon/trash1.png" style="top: 800px; right:25%;"></div>
+		<div onmouseover="die()"><img class="trash" src="../icon/trash2.png" style="top: 600px; right:17%;"></div>
+		<div onmouseover="die()"><img class="trash" src="../icon/trash3.png" style="top: 400px; right:23%;"></div>
 	</div>
-	<br>
-	<div class="leafs">
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
+	<div class="desks">
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
 	</div>
-	<div class="clear" onmouseover="nextstage(2)" style="color:red; width: 100px; position:absolute; margin-top: 300px;">
-		클리어!!
-	</div>
-	<div class="leafs">
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
-		<div class="leaf" onmouseover="die()"><img class="img_leaf" src="../icon/desk.png" /></div>
+	<div class="next" onmouseover="nextstage(2)" style="width: 100px;">next !!</div>
+	<div class="desks">
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
+		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
 	</div>
 	
 	<div class="character"><img src="../icon/chracter.gif"></div>
