@@ -1,6 +1,6 @@
 # OutSchool
 
-* 개발 기간 : 2021.11.02 ~ 
+* 기획 · 개발 기간 : 2021.11.02 ~ 
 
 ### BUILT WITH
 
@@ -13,3 +13,4 @@
 
 * DEVELOPER
   * HyeWon Park - [s2028@e-mirim.hs.kr], [https://github.com/phw-plain]
+  * JiHo Kim - [s2007@e-mirim.hs.kr]
