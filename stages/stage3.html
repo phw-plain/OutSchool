@@ -6,6 +6,28 @@
         body {
             background-image: url("../img/stage3.png");
         }
+        .toilets{
+            position: absolute;
+            width: 100%;
+        }
+        .ts1{
+            bottom: 301px;
+        }
+        .ts2{
+            bottom: 0;
+        }
+        .toilet{
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .tL{
+            float: left;
+        }
+        .tR{
+            float: right;
+        }
     </style>
 </head>
 <body>
@@ -13,8 +35,26 @@
         <div class="place p1">현재 위치</div>
         <div class="place p2">화장실</div>
     </div>
-    <div class="next" onmouseover="nextstage(4)" style="width: 100px;">next !!</div>
+    <div class="toilets ts1">
+        <div class="toilet tL">
+            화장실 1
+        </div>
+        <div class="toilet tR">
+            화장실 2
+        </div>
+    </div>
+    <div class="toilets  ts2">
+        <div class="toilet tL">
+            화장실 3
+        </div>
+        <div class="toilet tR">
+            화장실 4
+        </div>
+    </div>
+    <div class="next" onmouseover="nextstage(4)" style="top: 900px; left: 48%">next !!</div>
+    <img src="../icon/wastepaper.png" id="wastepaper">
     <div class="character"><img src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
+    <script type="text/javascript" src="../js/dragdrop.js"></script>
 </html>
