@@ -14,6 +14,24 @@
 		#ai2{
 			margin-top: 300px;
 		}
+		#ai3{
+			margin-top: 600px;
+		}
+		.mops{
+			width: 100%;
+			position: absolute;
+		}
+		.m1{
+			margin-top: 10%;
+		}
+		.m2{
+			margin-top: 34%;
+		}
+		.mop{
+			display: inline-block;
+			margin-left: 10%;
+			margin-right: 10%;
+		}
 	</style>
 </head>
 <body onload="init()">
@@ -21,9 +39,22 @@
         <div class="place p1">현재 위치</div>
         <div class="place p2">복도</div>
     </div>
+	<div class="mops m1">
+		<img class="mop" style="margin-top: 8%;" src="../icon/cleaner1.png" onmouseover="die()"/>
+		<img class="mop" style="margin-bottom: 8%;" src="../icon/cleaner2.png" onmouseover="die()"/>
+		<img class="mop" style="margin-top: 8%;" src="../icon/cleaner1.png" onmouseover="die()"/>
+		<img class="mop" style="margin-bottom: 8%;" src="../icon/cleaner2.png" onmouseover="die()"/>
+	</div>
+	<div class="mops m2">
+		<img class="mop"src="../icon/cleaner1.png" onmouseover="die()"/>
+		<img class="mop"src="../icon/cleaner2.png" onmouseover="die()"/>
+		<img class="mop"src="../icon/cleaner1.png" onmouseover="die()"/>
+		<img class="mop"src="../icon/cleaner2.png" onmouseover="die()"/>
+	</div>
 	<div class="next" onmouseover="nextstage(3)" style="top: 300px; right: 10px;">next !!</div>
-	<img onmouseover="die()" id="ai1" src="../icon/ai.gif" style="position: absolute;top: 50px; left: 10px;">
-	<img class="ai2" onmouseover="die()" id="ai2" src="../icon/ai.gif" style="position: absolute;top: 50px; left: 1000px;">
+	<img id="ai1" onmouseover="die()"  src="../icon/ai.gif" style="position: absolute;top: 50px; left: 1600px;">
+	<img id="ai2" onmouseover="die()"  src="../icon/ai.gif" style="position: absolute;top: 50px; left: 10px;">
+	<img id="ai3" onmouseover="die()"  src="../icon/ai.gif" style="position: absolute;top: 50px; left: 1600px;">
 	<div class="character"><img src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
