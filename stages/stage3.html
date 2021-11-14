@@ -28,6 +28,17 @@
         .tR{
             float: right;
         }
+        #wastepaper{
+            position: absolute; 
+            cursor:pointer;
+            top: 200px;
+            left: 10;
+            width: 80px;
+            height: 80px;
+        }
+        .check3{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -44,17 +55,30 @@
         </div>
     </div>
     <div class="toilets  ts2">
-        <div class="toilet tL">
+        <div class="toilet tL" onmouseover="check()">
             화장실 3
         </div>
         <div class="toilet tR">
             화장실 4
         </div>
     </div>
-    <div class="next" onmouseover="nextstage(4)" style="top: 900px; left: 48%">next !!</div>
+    <div class="next check3" onmouseover="nextstage(4)" style="top: 900px; left: 48%">next !!</div>
     <img src="../icon/wastepaper.png" id="wastepaper">
     <div class="character"><img src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
     <script type="text/javascript" src="../js/dragdrop.js"></script>
+    <script>
+        function check() {
+            let wp = document.body.querySelector('#wastepaper')
+            let X = wp.style.left;
+            let Y = wp.style.top;
+            X = X.replace('/[^0-9]/g','');
+            Y = Y.replace('/[^0-9]/g','');
+            if(X < '260' && Y > '600'){
+                document.body.querySelector('.check3').style.display = 'block';
+                wp.style.display = 'none';
+            }
+        }
+    </script>
 </html>

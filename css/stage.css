@@ -19,7 +19,7 @@ body{
 	float: left;
 	border: 2px solid black;
 	background-color: white;
-	top: 0px;
+	top: 5px;
 }
 .place{
 	display: inline-block; 
@@ -75,12 +75,26 @@ body{
 	width: 70px; 
 	height: 70px;
 }
-/* stage 3*/
-#wastepaper{
-	position: absolute; 
-	cursor:pointer;
-	top: 200px;
-	left: 10;
-	width: 80px;
-	height: 80px;
+/* stage 2*/
+#ai2{
+	margin-top: 300px;
 }
+#ai3{
+	margin-top: 600px;
+}
+.mops{
+	width: 100%;
+	position: absolute;
+}
+.m1{
+	margin-top: 10%;
+}
+.m2{
+	margin-top: 34%;
+}
+.mop{
+	display: inline-block;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+/* stage 3*/
