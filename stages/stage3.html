@@ -18,7 +18,7 @@
         }
         .toilet{
             display: inline-block;
-            width: 300px;
+            width: 400px;
             height: 300px;
             border: 1px solid red;
         }
@@ -38,6 +38,13 @@
         }
         .check3{
             display: none;
+        }
+        .talk{
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            padding-right: 35%;
+            justify-content: center;
         }
     </style>
 </head>
@@ -62,6 +69,10 @@
             화장실 4
         </div>
     </div>
+    <div class="talk">
+        <p style="position: absolute; bottom: 120px;">어떡하지... 휴지가 없어</p>
+        <img src="../icon/talk.png">
+    </div>
     <div class="next check3" onmouseover="nextstage(4)" style="top: 900px; left: 48%">next !!</div>
     <img src="../icon/wastepaper.png" id="wastepaper">
     <div class="character"><img src="../icon/chracter.gif"></div>
@@ -75,8 +86,9 @@
             let Y = wp.style.top;
             X = X.replace('/[^0-9]/g','');
             Y = Y.replace('/[^0-9]/g','');
-            if(X < '260' && Y > '600'){
+            if(X < '360' && Y > '600'){
                 document.body.querySelector('.check3').style.display = 'block';
+                document.body.querySelector('.talk').style.display = 'none';
                 wp.style.display = 'none';
             }
         }
