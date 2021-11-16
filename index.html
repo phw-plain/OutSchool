@@ -3,6 +3,17 @@
 <head>
 	<link rel="stylesheet" href="css/index.css">
 	<title>OutSchool</title>
+    <script>
+        const player2 = new Audio(); 
+        player2.loop = true;
+        player2.pause();
+
+        window.addEventListener('message', function(e) {
+            player2.src = e.data.hello; 
+            player2.play();
+            console.log(e.data.hello); 
+        });
+    </script>
 </head>
 <body>
 	<iframe width="100%" src="GameIntro.html" frameborder="0"></iframe>

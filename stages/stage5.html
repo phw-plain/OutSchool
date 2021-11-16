@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
+    <script type="text/javascript" src="../js/right.js"></script>
     <style>
         body {
             background-image: url("../img/stage5.png");
@@ -17,30 +18,6 @@
             top: 0px;
         }
     </style>
-    <script>
-        let autoBlind;
-
-        function init(){
-            autoBlind = document.body.querySelector('#blind');
-            blindAuto()
-        }
-
-        function manual(){
-            // document.body.classList.add('.blind')
-            autoBlind.style.opacity = '1'
-            document.body.querySelector('.character').style.display = 'none';
-
-            setTimeout(function(){
-                // document.body.querySelector('.character').style.display = 'block';
-                document.body.classList.remove('.blind')
-                autoBlind.style.opacity = '0'
-            }, 5000);
-        }
-
-        function blindAuto(){
-            let st = setInterval("manual()", 10000);
-        }
-    </script>
 </head>
 <body onload="init()">
     <div class="subtitle">

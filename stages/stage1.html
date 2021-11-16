@@ -4,12 +4,17 @@
 	<link rel="stylesheet" href="../css/stage.css">
 	<script type="text/javascript" src="../js/stage.js"></script>
 	<title>OutSchool</title>
+	<script>
+		window.onload = function() {
+			window.parent.postMessage({ hello: 'mp3/stagebgm.mp3' }, '*');
+		};
+	</script>
+	<style type="text/css">
+		body {
+			background-image: url("../img/stage1.png");
+		}
+	</style>
 </head>
-<style type="text/css">
-	body {
-		background-image: url("../img/stage1.png");
-	}
-</style>
 <body>
 	<div class="subtitle">
         <div class="place p1">현재 위치</div>
