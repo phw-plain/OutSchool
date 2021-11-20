@@ -18,14 +18,17 @@
 	<h1 class="name">OutSchool</h1>
 	<br><br><br><br>
 	<div class="menus">
-		<div class="menu" onclick="gamestart()">게임 시작</div>
+		<div class="menu" onclick="gameStart()">게임 시작</div>
 		<div class="menu">게임 랭킹</div>
-		<div class="menu">게임 방법</div>	
+		<div class="menu" onclick="gameRule()">게임 방법</div>	
 	</div>
 </body>	
 <script>
-	function gamestart(){
+	function gameStart(){
 		location.href="stages/stage1.html";
+	}
+	function gameRule(){
+		location.href="rules/rule.html";
 	}
 </script>
 <script type="text/javascript" src="js/audio2.js"></script>
