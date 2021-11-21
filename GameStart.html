@@ -5,6 +5,40 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/audio.js"></script>
 	<title>OutSchool</title>
+	<style>
+		.menu {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 50px;
+		}
+
+		.button {
+			width: 240px;
+			height: 75px;
+			font-family: 'Roboto', sans-serif;
+			font-size: 26px;
+			text-transform: uppercase;
+			letter-spacing: 2.5px;
+			font-weight: 500;
+			color: #000;
+			background-color: #fff;
+			border: none;
+			border-radius: 45px;
+			box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+			transition: all 0.3s ease 0s;
+			cursor: pointer;
+			outline: none;
+		}
+
+		.button:hover {
+			background-color: #2EE59D;
+			box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+			color: #fff;
+			transform: translateY(-7px);
+		}
+	</style>
 </head>
 <body>
 	<div class="main" style="position: absolute;">
@@ -18,9 +52,12 @@
 	<h1 class="name">OutSchool</h1>
 	<br><br><br><br>
 	<div class="menus">
-		<div class="menu" onclick="gameStart()">게임 시작</div>
-		<div class="menu">게임 랭킹</div>
-		<div class="menu" onclick="gameRule()">게임 방법</div>	
+		<div class="menu">
+			<button class="button" onclick="gameStart()">게임 시작</button>
+		</div>
+		<div class="menu">
+			<button class="button" onclick="ggameRule()">게임 방법</button>
+		</div>
 	</div>
 </body>	
 <script>
