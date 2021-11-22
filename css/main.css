@@ -4,6 +4,13 @@
     text-align:center;
     font-size: 100px;
 }
+.menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 .menus{
     text-align: -webkit-center;
     margin-top: 100px;
@@ -23,4 +30,106 @@
 .main {
     top: 15px;
     right: 15px;
+}
+.button {
+    width: 240px;
+    height: 75px;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.wrap {
+  display:block;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  text-align:center;
+  background:#f0f0f0;
+  padding-top:55px;
+}
+/* 팝업 */
+.box_modal {
+    position: fixed;
+    display:block;
+    width:900px;
+    height:700px;
+    top:25%;
+    left:50%;
+    margin-top:-75px;
+    margin-left:-450px;
+    background:#d9e5e9;
+    border:1px solid #386980;
+    overflow:hidden;
+    /* 디자인 효과*/
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* 애니메이션 효과*/
+    visibility: collapse;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+/* 팝업 닫기 버튼 */
+.closer {
+    position:absolute;
+    width:30px;
+    height:30px;
+    top:20px;
+    right:20px;
+    text-align:center;
+    line-height:26px;
+    font-size:26px;
+    cursor:pointer;
+}
+.closer:hover{
+    color: #2EE59D;
+}
+/* 팝업 내용 */
+.text {
+    height: 100%;
+    margin-left:20px;
+    margin-top:20px;
+    display:inline-block;
+    padding:20px;
+}
+.text h3 {
+    font-size:19px;
+    margin:0;
+}
+.text p {
+    font-size:13px;
+}
+/* 윈도우 팝업 소스 */
+input#modal[type=checkbox]:checked ~ .box_modal {
+  visibility: visible;
+  -webkit-transform:scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.hidden{
+    display: none;
 }

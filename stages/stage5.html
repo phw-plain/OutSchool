@@ -7,16 +7,6 @@
         body {
             background-image: url("../img/stage5.png");
         }
-        .blind{
-            opacity:0;
-            transition: all 2s;
-            position: absolute;
-            background-color: black;
-            width: 100%;
-            height: 100%;
-            left: 0px;
-            top: 0px;
-        }
     </style>
 </head>
 <body onload="init()">
@@ -24,6 +14,16 @@
         <div class="place p1">현재 위치</div>
         <div class="place p2">과학실</div>
     </div>
+    <div class="science_desk1">
+        <img src="../icon/007.png">
+    </div>
+    <div class="science_desk2">
+        <img src="../icon/005.png">
+        <img src="../icon/006.png">
+        <img src="../icon/006.png">
+        <img src="../icon/005.png">
+    </div>
+    <div class="next" onmouseover="nextstage(5)" style="top: 160px; right: 1%">next !!</div>
     <div id="blind" class="blind"></div>
     <div class="character"><img src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>

@@ -2,49 +2,9 @@
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
-    <style>
+    <style>  
         body {
             background-image: url("../img/stage3.png");
-        }
-        .toilets{
-            position: absolute;
-            width: 100%;
-        }
-        .ts1{
-            bottom: 301px;
-        }
-        .ts2{
-            bottom: 0;
-        }
-        .toilet{
-            display: inline-block;
-            width: 400px;
-            height: 300px;
-            border: 1px solid red;
-        }
-        .tL{
-            float: left;
-        }
-        .tR{
-            float: right;
-        }
-        #wastepaper{
-            position: absolute; 
-            cursor:pointer;
-            top: 200px;
-            left: 10;
-            width: 80px;
-            height: 80px;
-        }
-        .check3{
-            display: none;
-        }
-        .talk{
-            height: 100%;
-            display: flex;
-            align-items: flex-end;
-            padding-right: 35%;
-            justify-content: center;
         }
     </style>
 </head>
@@ -69,6 +29,8 @@
             화장실 4
         </div>
     </div>
+    <img class="water1" src="../icon/008.png" onmouseover="die()">
+    <img class="water2" src="../icon/009.png" onmouseover="die()">
     <div class="talk">
         <p style="position: absolute; bottom: 120px;">어떡하지... 휴지가 없어</p>
         <img src="../icon/talk.png">
