@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="css/main.css">
 	<title>OutSchool</title>
 	<style>
 		body{
@@ -14,11 +15,26 @@
 		window.onload = function() {
 			window.parent.postMessage({ hello: '' }, '*');
 		};
+
+		function gameStart(){
+			location.href="stages/stage1.html";
+		}
+		function gameHome(){
+			location.href="GameStart.html";
+		}
 	</script>
 </head>
 <body>
-	<h1 style="text-align:center; font-size: 100px
-		; margin-top: 150px; color: red;" >GameOver</h1>
-	<a href="GameStart.html">← 시작화면으로</a>
+	<h1 class="name">
+		<p style="color: red;">GameOver</p>
+	</h1>
+	<div class="menus">
+		<div class="menu">
+			<button class="button b" onclick="gameStart()">다시하기</button>
+		</div>
+		<div class="menu">
+			<button class="button b" onclick="gameHome()">메인으로</button>
+		</div>
+	</div>
 </body>
 </html>
