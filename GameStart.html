@@ -5,6 +5,8 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/audio.js"></script>
 	<title>OutSchool</title>
+	<style>
+	</style>
 </head>
 <body>
 	<div class="main" style="position: absolute;">
@@ -16,31 +18,36 @@
         </button>
     </div>
 	<h1 class="name">
-		<div>Out</div>
-		<div>School</div>
+		<p class="name1">Out</p>
+		<p class="name2">School</p>
 	</h1>
-	<br><br><br><br>
 	<div class="menus">
 		<div class="menu">
-			<button class="button" onclick="gameStart()">게임 시작</button>
+			<button class="button a" onclick="gameStart()">게임 시작</button>
 		</div>
 		<div class="menu">
-			<label for="modal" class="button"><p style="margin-top: 20px">게임 방법</label>
+			<button class="button a" onclick="gameRank()">게임 랭킹</button>
+		</div>
+		<div class="menu">
+			<label for="modal" class="button a"><p style="margin-top: 20px">게임 방법</label>
 		</div>
 	</div>
 
 	<input type="checkbox" id="modal" class="hidden">
-<div class="box_modal">
-  <label for="modal" class="closer">x</label>
-  <div class="text">
-    <h3>게임 방법</h3>
-    <p>추가 될 예정입니다.
-  </div>
-</div>
-</body>	
+	<div class="box_modal">
+	  <label for="modal" class="closer">x</label>
+	  <div class="text">
+	    <h3>게임 방법</h3>
+	    <p>추가 될 예정입니다.
+	  </div>
+	</div>
+	</body>	
 <script>
 	function gameStart(){
 		location.href="stages/stage1.html";
+	}
+	function gameRank(){
+		location.href="gameRank.html";
 	}
 </script>
 <script type="text/javascript" src="js/audio2.js"></script>
