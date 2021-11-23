@@ -14,20 +14,12 @@
         <div class="place p2">화장실</div>
     </div>
     <div class="toilets ts1">
-        <div class="toilet tL">
-            화장실 1
-        </div>
-        <div class="toilet tR">
-            화장실 2
-        </div>
+        <div class="toilet tL" onmouseover="die()"></div>
+        <div class="toilet tR" onmouseover="die()"></div>
     </div>
     <div class="toilets  ts2">
-        <div class="toilet tL" onmouseover="check()">
-            화장실 3
-        </div>
-        <div class="toilet tR">
-            화장실 4
-        </div>
+        <div class="toilet tL" onmouseover="check()"></div>
+        <div class="toilet tR" onmouseover="die()"></div>
     </div>
     <img class="water1" src="../icon/008.png" onmouseover="die()">
     <img class="water2" src="../icon/009.png" onmouseover="die()">
@@ -37,7 +29,7 @@
     </div>
     <div class="next check3" onmouseover="nextstage(4)" style="top: 900px; left: 48%">next !!</div>
     <img src="../icon/wastepaper.png" id="wastepaper">
-    <div class="character"><img src="../icon/chracter.gif"></div>
+    <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
     <script type="text/javascript" src="../js/dragdrop.js"></script>
