@@ -1,5 +1,6 @@
 body{
     overflow: hidden;
+    font-family: 'Cafe24SsurroundAir';
 }
 .name{
     display: inline-flex;
@@ -44,6 +45,7 @@ body{
 .button {
     width: 240px;
     height: 75px;
+    font-family: 'NEXON Lv1 Gothic OTF';
     font-size: 26px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -154,4 +156,17 @@ input#modal2[type=checkbox]:checked ~ .box_modal2 {
 }
 .hidden{
     display: none;
+}
+/* font */
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
