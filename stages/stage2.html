@@ -11,6 +11,15 @@
 		body {
 			background-image: url("../img/stage2.png");
 		}
+		.reverse {
+			transform:rotate(0deg);
+			-moz-transform: scaleX(-1); 
+			-o-transform: scaleX(-1); 
+			-webkit-transform: scaleX(-1); 
+			transform: scaleX(-1);   
+			filter: FlipH;
+			-ms-filter: "FlipH";
+		}
 	</style>
 </head>
 <body onload="init()">
@@ -31,9 +40,9 @@
 		<img class="mop"src="../icon/cleaner2.png" onmouseover="die()"/>
 	</div>
 	<div class="next" onmouseover="nextstage(3)" style="top: 250px; right: 10px;">next !!</div>
-	<img id="ai1" onmouseover="die()"  src="../icon/ai.gif" style="position: absolute;top: 50px; left: 1600px;">
-	<img id="ai2" onmouseover="die()"  src="../icon/ai.gif" style="position: absolute;top: 50px; left: 10px;">
-	<img id="ai3" onmouseover="die()"  src="../icon/ai.gif" style="position: absolute;top: 50px; left: 1600px;">
+	<img id="ai1" class="reverse" onmouseover="die()" src="../icon/rion.gif" style="position: absolute;top: 50px; left: 1600px;">
+	<img id="ai2" class="reverse" onmouseover="die()" src="../icon/rion.gif" style="position: absolute;top: 50px; left: 10px;">
+	<img id="ai3" class="reverse" onmouseover="die()" src="../icon/rion.gif" style="position: absolute;top: 50px; left: 1600px;">
 	<div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>

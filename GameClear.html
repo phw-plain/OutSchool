@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/main.css">
+	<title>OutSchool</title>
+	<style>
+		body{
+			background-color: black;
+		}
+		a {
+			color: white;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			window.parent.postMessage({ hello: '' }, '*');
+		};
+		function gameStart(){
+			location.href="stages/stage1.html";
+		}
+		function gameHome(){
+			location.href="GameStart.html";
+		}
+	</script>
+</head>
+<body>
+	<h1 class="name">
+		<p style="color: green;">GameClear</p>
+	</h1>
+	<div class="menus">
+		<div class="menu">
+			<button class="button b" onclick="gameStart()">다시하기</button>
+		</div>
+		<div class="menu">
+			<button class="button b" onclick="gameHome()">메인으로</button>
+		</div>
+	</div>
+</body>
+</html>

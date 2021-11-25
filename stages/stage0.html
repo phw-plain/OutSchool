@@ -2,9 +2,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="../css/stage.css">
+	<script type="text/javascript" src="../js/boss.js"></script>
 	<title>OutSchool</title>
+	<style type="text/css">
+		body {
+			background-image: url("../img/stage0.png");
+			cursor: auto;
+		}
+	</style>
 </head>
 <body>
-
+	<div class="subtitle" style="width: 400px;">
+        <div class="place p1">현재 위치</div>
+        <div class="place p2">보스 스테이지</div>
+    </div>
+    <div class="doors_txt">
+    	<div class="door_txt">1</div>
+    	<div class="door_txt center_txt">2</div>
+    	<div class="door_txt">3</div>
+	</div>
+	<div class="doors_img">
+		<img id="door1" class="door_img" src="../icon/door1.png">
+		<img id="door2" class="door_img center_img" src="../icon/door2.png">
+		<img id="door3" class="door_img" src="../icon/door3.png">
+	</div>
+	<img class="table" src="../icon/table.png">
+	<img class="memo_img" onclick="memoOn()" src="../icon/memo.png">
+	<div class="table_btns">
+		<button id="btn1" class="table_btn" onclick="btnclick(1)">1</button>
+		<button id="btn2" class="table_btn" onclick="btnclick(2)">2</button>
+		<button id="btn3" class="table_btn" onclick="btnclick(3)">3</button>	
+	</div>
+	<button class="table_okbtn" onclick="okay()">확인</button>
+	<div class="interaction"></div>
+	<div class="character hidden"><img class="character_img" src="../icon/chracter.gif"></div>
+	<div class="memo"><br><br>
+		<h3>초보자를 위한 설명</h3><br>
+		<p> 몬티홀의 역설을 아시나요?</p><br>
+		<p> 3개의 문 중 진짜 탈출구는 하나다!!</p>
+		<p> 문을 선택하면 가짜 탈출구 하나를 알려줍니다.</p>
+		<p> 여기서 선택을 유지할지 번복할지에 따라 결과가 정해질 것 입니다.</p><br>
+		<p> 마지막 관문에서 당신의 행운을 테스트 하세요!!</p>
+		<button class="btn-ok" onclick="memoOff()">확인</button>
+	</div>
+	<script type="text/javascript" src="../js/character.js"></script>
 </body>
 </html>

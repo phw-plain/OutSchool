@@ -7,60 +7,6 @@
         body {
             background-image: url("../img/stage5.png");
         }
-        .box{
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 200px;
-            height: 200px;
-            transition: all 1s;
-        }
-        .getitem{
-            display: none;
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: auto;
-            background-color: #fff;
-            border: none;
-            border-radius: 45px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        }
-        .key{
-            margin-top: 70px;
-            margin-left: 20px;
-            width: 200px;
-            height: 200px;
-        }
-        .getitem_txt{
-            margin-top: 60px;
-            font-size: 25px;
-        }
-        .btn-ok{
-            margin-top: 30px;
-            width: 150px;
-            height: 55px;
-            font-size: 20px;
-            font-weight: 500;
-            color: #000;
-            background-color: #fff;
-            border: none;
-            border-radius: 45px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease 0s;
-            cursor: pointer;
-        }
-        .btn-ok:hover{
-            color: white;
-            background-color: #2EE59D;
-        } 
-        .btn-ok:active{
-            color: white;
-            background-color: red;
-        }
     </style>
     <script type="text/javascript">
         let check = 0
@@ -68,12 +14,14 @@
             let box = document.body.querySelector('.box')
             box.src = '../icon/open_box.png'
             document.body.querySelector('.getitem').style.display = "block"
+            document.body.querySelector('.interaction').style.display = "block"
         }
-
+        
         function getitem(){
             check = 1
-           document.body.querySelector('.getitem').style.display = 'none'
-           document.body.querySelector('.box').onmouseover = ""
+            document.body.querySelector('.getitem').style.display = 'none'
+            document.body.querySelector('.interaction').style.display = 'none'
+            document.body.querySelector('.box').onmouseover = ""
         }
         function checkkey(){
             if(check == 1) nextstage(5)
@@ -98,6 +46,7 @@
     </div>
     <img class="box" src="../icon/lock_box.png" onmouseover="open_box()">
     <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
+    <div class="interaction"></div>
     <div class="getitem">
         <img class="key" src="../icon/key.png">
         <p class="getitem_txt">열쇠 획득!!</p>
