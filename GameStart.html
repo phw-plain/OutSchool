@@ -2,9 +2,80 @@
 <html>
 <head>
 	<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/audio.js"></script>
 	<title>OutSchool</title>
+	<style type="text/css">
+		.rule{
+			background-color: beige;
+			width: 800px;
+			height: 570px;
+		}
+		.rule-top{
+			position: absolute;
+			top: 50px;
+			right: 60px;
+		}
+		.rule-bottom{
+			position: absolute;
+			top: 82px;
+		}
+		.rulebuttons{
+			color: black;
+			cursor: pointer;
+			display: flex;
+   			align-items: flex-end;
+		}
+		.btn-type{
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+ 			border-radius: 11px 11px 1px 1px;
+ 			padding: 5px;
+ 			text-align: center;
+		}
+		.btn-color1{
+			border: 1px solid beige;
+ 			background-color: beige;
+		}
+		.btn-color2{
+			border: 1px solid green;
+ 			background-color: green;
+		}
+		.btn-color3{
+			border: 1px solid yellow;
+ 			background-color: yellow;
+		}
+		.btn-color4{
+			border: 1px solid blue;
+ 			background-color: blue;
+		}
+		.btn-up{
+			-webkit-animation-name : animation_play1;
+			-webkit-animation-duration : 0.3s;
+			-webkit-animation-fill-mode:both;
+		}
+		.btn-down{
+			-webkit-animation-name : animation_play2;
+			-webkit-animation-duration : 0.3s;
+			-webkit-animation-fill-mode:both;
+		}
+		@-webkit-keyframes animation_play1 {
+			0% {
+				-webkit-transform : translateY(0px);
+			}
+			100% {
+				-webkit-transform : translateY(-20px);
+			}
+		}
+		@-webkit-keyframes animation_play2 {
+			0% {
+				-webkit-transform : translateY(-20px);
+			}
+			100% {
+				-webkit-transform : translateY(0px);
+			}
+		}
+	</style>
 </head>
 <body>
 	<div class="main" style="position: absolute;">
@@ -21,13 +92,10 @@
 	</h1>
 	<div class="menus">
 		<div class="menu">
-			<button class="button a" onclick="gameStart()">게임 시작</button>
+			<button class="button a" onmouseenter="btnplayer()" onclick="gameStart()">게임 시작</button>
 		</div>
 		<div class="menu">
-			<button class="button a" onclick="gameRank()">게임 랭킹</button>
-		</div>
-		<div class="menu">
-			<label for="modal" class="button a"><p style="margin-top: 20px">게임 방법</label>
+			<label for="modal" class="button a"  onmouseenter="btnplayer()"><p style="margin-top: 20px">게임 방법</label>
 		</div>
 	</div>
 
@@ -36,17 +104,49 @@
 	  <label for="modal" class="closer">x</label>
 	  <div class="text">
 	    <h3>게임 방법</h3>
-	    <p>추가 될 예정입니다.
+	    <div>
+	    	<div class="rule-top">
+		    	<div class="rulebuttons">
+		    		<div onclick="select(1)" id="rule1" class="btn-type btn-color1">rule1</div>
+		    		<div onclick="select(2)" id="rule2" class="btn-type btn-color2">rule2</div>
+		    		<div onclick="select(3)" id="rule3" class="btn-type btn-color3">rule3</div>
+		    		<div onclick="select(4)" id="rule4" class="btn-type btn-color4">rule4</div>
+		    	</div>
+	    	</div>
+	    	<div class="rule-bottom">
+			    <div class="rule">
+			    	내용입니다.
+			    </div>
+			</div>
+	    </div>
 	  </div>
 	</div>
-	</body>	
+</body>	
 <script>
+	const color = new Array('beige', 'green', 'yellow', 'blue')
+	let lastidx = 1
+
+	function select(idx){
+		/* 카테고리 up down 변경*/
+		document.body.querySelector(`#rule${lastidx}`).classList.add("btn-down")		
+		document.body.querySelector(`#rule${lastidx}`).classList.remove("btn-down")
+		document.body.querySelector(`#rule${lastidx}`).classList.remove("btn-up")
+		document.body.querySelector(`#rule${idx}`).classList.add("btn-up")
+		/* 카테고리에 따른 rule main 디자인 변경 */
+		document.body.querySelector('.rule').style.backgroundColor = `${color[idx-1]}`
+	
+		lastidx = idx
+	}
+
 	function gameStart(){
 		location.href="stages/stage1.html";
 	}
+
 	function gameRank(){
 		location.href="gameRank.html";
 	}
+
+	select(1)
 </script>
 <script type="text/javascript" src="js/audio2.js"></script>
 </html>

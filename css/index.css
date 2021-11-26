@@ -4,4 +4,77 @@ body{
     background-size: cover;
     overflow: hidden;
     margin: 0px;
+	font-family: 'DungGeunMo';
+}
+.alert{
+  display: none;
+}
+.alt_title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.alt_main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  color: #000;
+  background-color: rgb(211, 211, 211);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.alt_txt{
+	font-size: 22px;
+  margin-left: 7%;
+  margin-right: 7%;
+	margin-top: 10%; 
+	text-align: center;
+}
+.alt_img{
+	text-align: center;
+}
+.alt_min, .alt_max{
+  display: none;
+}
+
+@media (max-width: 1900px) {
+  body{
+  	background-color: white;
+	background-image: none;
+  }
+  .access{
+  	display: none;
+  }
+  .alert{
+  	display: block;
+  }
+  .alt_min{
+    display: block;
+  }
+}
+
+@media (min-width: 2200px) {
+  body{
+    background-color: white;
+  background-image: none;
+  }
+  .access{
+    display: none;
+  }
+  .alert{
+    display: block;
+  }
+  .alt_max{
+    display: block;
+  }
+}
+
+@font-face {
+     font-family: 'DungGeunMo';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
 }

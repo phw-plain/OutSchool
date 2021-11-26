@@ -9,8 +9,12 @@
         }
     </style>
     <script type="text/javascript">
+        const click = new Audio(); 
+        click.src = "../mp3/item.mp3"; 
+
         let check = 0
         function open_box() {
+            click.play();
             let box = document.body.querySelector('.box')
             box.src = '../icon/open_box.png'
             document.body.querySelector('.getitem').style.display = "block"

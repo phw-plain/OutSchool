@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/index.css">
 	<title>OutSchool</title>
     <script>
-		window.resizeTo(1280, 900);
-        const player2 = new Audio(); 
-        player2.loop = true;
-        player2.pause();
+        const player1 = new Audio(); 
+        player1.pause();
+
 
         window.addEventListener('message', function(e) {
-            player2.src = e.data.hello; 
-            player2.play();
+        	if(e.data.hello != null){
+        		player1.loop = false;
+	            player1.src = e.data.hello; 
+	            player1.play();
+        	} else {
+        		player1.loop = true;
+	            player1.src = e.data.hello; 
+	            player1.play();
+        	}
             console.log(e.data.hello); 
         });
     </script>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<style type="text/css">
-		.alert{
-			display: none;
-		}
-		@media (max-width: 1800px) {
-		  body{
-		  	background-color: red;
-    		background-image: none;
-		  }
-		  .access{
-		  	display: none;
-		  }
-		  .alert{
-		  	display: block;
-		  }
-		}
-	</style>
 </head>
 <body>
 	<iframe class="access" width="100%" src="GameStart.html" frameborder="0"></iframe>
 	<div class="alert">
-		<h1>
-			디스플레이의 크기가 작아 게임을 이용하실 수 없습니다.<br>
-			화면의 비율을 조정하거나
-			모바일의 경우에는 PC에서 이용해 주세요.
-		</h1>
+		<h1 class="alt_title">OutSchool</h1>
+		<div class="alt_main">
+			<div class="alt_txt alt_min">
+				디스플레이의 크기가 작아 게임을 이용하실 수 없습니다.<br>
+				화면의 비율을 조정하거나
+				모바일의 경우에는 PC에서 이용해 주세요.
+			</div>
+			<div class="alt_txt alt_max">
+				디스플레이의 크기가 커서 게임을 이용하실 수 없습니다.<br>
+				화면의 비율을 조정해 주세요.
+			</div>
+			<div class="alt_img">
+				<img src="icon/access.png">
+			</div>
+		</div>
 	</div>
 </body>	
     <script>
-        frame1 = document.body.querySelector('iframe')
+        let frame1 = document.body.querySelector('iframe')
         frame1.style.height = `${window.innerHeight}px`
     </script>
 </html>

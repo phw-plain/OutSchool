@@ -13,12 +13,14 @@
 	</style>
 	<script>
 		window.onload = function() {
-			window.parent.postMessage({ hello: '' }, '*');
+			window.parent.postMessage({ hello: 'mp3/gameover.mp3' }, '*');
 		};
 		function gameStart(){
+			window.parent.postMessage({ hello: '' }, '*');
 			location.href="stages/stage1.html";
 		}
 		function gameHome(){
+			window.parent.postMessage({ hello: '' }, '*');
 			location.href="GameStart.html";
 		}
 	</script>
