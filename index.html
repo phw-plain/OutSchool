@@ -15,9 +15,34 @@
             console.log(e.data.hello); 
         });
     </script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style type="text/css">
+		.alert{
+			display: none;
+		}
+		@media (max-width: 1800px) {
+		  body{
+		  	background-color: red;
+    		background-image: none;
+		  }
+		  .access{
+		  	display: none;
+		  }
+		  .alert{
+		  	display: block;
+		  }
+		}
+	</style>
 </head>
 <body>
-	<iframe width="100%" src="GameIntro.html" frameborder="0"></iframe>
+	<iframe class="access" width="100%" src="GameStart.html" frameborder="0"></iframe>
+	<div class="alert">
+		<h1>
+			디스플레이의 크기가 작아 게임을 이용하실 수 없습니다.<br>
+			화면의 비율을 조정하거나
+			모바일의 경우에는 PC에서 이용해 주세요.
+		</h1>
+	</div>
 </body>	
     <script>
         frame1 = document.body.querySelector('iframe')
