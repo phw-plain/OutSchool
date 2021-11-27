@@ -1,11 +1,11 @@
 body{
-    background-image: url("../img/main.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    margin: 0px;
-	font-family: 'DungGeunMo';
-}
+  background-image: url("../img/main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin: 0px;
+  font-family: 'DungGeunMo';
+  }
 .alert{
   display: none;
 }
