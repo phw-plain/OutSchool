@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
+    <script type="text/javascript" src="../js/getitem.js"></script>
     <style>  
         body {
             background-image: url("../img/stage3.png");
@@ -18,33 +19,24 @@
         <div class="toilet tR" onmouseover="die()"></div>
     </div>
     <div class="toilets  ts2">
-        <div class="toilet tL" onmouseover="check()"></div>
+        <div class="toilet tL" onmouseover="itemcheck()"></div>
         <div class="toilet tR" onmouseover="die()"></div>
     </div>
     <img class="water1" src="../icon/008.png" onmouseover="die()">
     <img class="water2" src="../icon/009.png" onmouseover="die()">
     <div class="talk">
-        <p style="position: absolute; bottom: 120px;">어떡하지... 휴지가 없어</p>
-        <img src="../icon/talk.png">
+        <p class="bubble talk_txt" style="position: absolute; bottom: 120px;">어떡하지... 휴지가 없어</p>
     </div>
-    <div class="next check3" onmouseover="nextstage(4)" style="top: 900px; left: 48%">next !!</div>
+    <div class="next" onmouseover="checkkey()" style="top: 900px; left: 48%">next !!</div>
     <img src="../icon/wastepaper.png" id="wastepaper">
     <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
+    <div class="interaction"></div>
+    <div class="getitem">
+        <img class="key" src="../icon/key.png">
+        <p class="getitem_txt">열쇠 획득!!</p>
+        <button class="btn-ok" onclick="getitem()">확인</button>
+    </div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
     <script type="text/javascript" src="../js/dragdrop.js"></script>
-    <script>
-        function check() {
-            let wp = document.body.querySelector('#wastepaper')
-            let X = wp.style.left;
-            let Y = wp.style.top;
-            X = X.replace('/[^0-9]/g','');
-            Y = Y.replace('/[^0-9]/g','');
-            if(X < '360' && Y > '600'){
-                document.body.querySelector('.check3').style.display = 'block';
-                document.body.querySelector('.talk').style.display = 'none';
-                wp.style.display = 'none';
-            }
-        }
-    </script>
 </html>

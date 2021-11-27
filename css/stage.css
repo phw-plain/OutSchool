@@ -141,15 +141,33 @@ body{
     width: 80px;
     height: 80px;
 }
-.check3{
-    display: none;
-}
 .talk{
     height: 100%;
     display: flex;
     align-items: flex-end;
     padding-right: 35%;
     justify-content: center;
+}
+.talk_txt{
+    padding-top: 30px;
+}
+.bubble {
+    position:relative;
+    margin: 50px;
+    width:300px;
+    height:50px;
+    background:white;
+    border-radius: 10px;
+}
+.bubble:after {
+    border-top:15px solid white;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    content:"";
+    position:absolute;
+    top:10px;
+    left:-15px;
 }
 .water1, .water2{
     position: absolute;

@@ -3,34 +3,12 @@
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
     <script type="text/javascript" src="../js/right.js"></script>
+    <script type="text/javascript" src="../js/getitem.js"></script>
     <style>
         body {
             background-image: url("../img/stage5.png");
         }
     </style>
-    <script type="text/javascript">
-        const click = new Audio(); 
-        click.src = "../mp3/item.mp3"; 
-
-        let check = 0
-        function open_box() {
-            click.play();
-            let box = document.body.querySelector('.box')
-            box.src = '../icon/open_box.png'
-            document.body.querySelector('.getitem').style.display = "block"
-            document.body.querySelector('.interaction').style.display = "block"
-        }
-        
-        function getitem(){
-            check = 1
-            document.body.querySelector('.getitem').style.display = 'none'
-            document.body.querySelector('.interaction').style.display = 'none'
-            document.body.querySelector('.box').onmouseover = ""
-        }
-        function checkkey(){
-            if(check == 1) nextstage(5)
-        }
-    </script>
 </head>
 <body onload="init()">
     <div id="blind" class="blind"></div>
@@ -48,7 +26,7 @@
         <div class="place p1">현재 위치</div>
         <div class="place p2">과학실</div>
     </div>
-    <img class="box" src="../icon/lock_box.png" onmouseover="open_box()">
+    <img class="box" src="../icon/lock_box.png" onmouseover="open_box(5)">
     <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
     <div class="interaction"></div>
     <div class="getitem">

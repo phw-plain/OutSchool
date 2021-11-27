@@ -54,30 +54,26 @@
 	    <div>
 	    	<div class="rule-top">
 		    	<div class="rulebuttons">
-		    		<div onclick="select(1)" id="rule_btn1" class="btn-type btn-color1">장애물</div>
-		    		<div onclick="select(2)" id="rule_btn2" class="btn-type btn-color2">선생님</div>
-		    		<div onclick="select(3)" id="rule_btn3" class="btn-type btn-color3">열  쇠</div>
+		    		<div onclick="select(1)" id="rule_btn1" class="btn-type btn-color1">주  의</div>
+		    		<div onclick="select(2)" id="rule_btn2" class="btn-type btn-color2">열  쇠</div>
+		    		<div onclick="select(3)" id="rule_btn3" class="btn-type btn-color3">장애물</div>
 		    		<div onclick="select(4)" id="rule_btn4" class="btn-type btn-color4">보  스</div>
 		    	</div>
 	    	</div>
 	    	<div class="rule-bottom">
 			    <div id="rule1" class="rule">
-			    	<h3>맵 곳곳에 있는 장애물을 피해서 학교를 탈출하자❗</h3>
+			    	<h3>※ 주의사항 ※</h3><br>
 			    	<h4>
-			    		장애물에 닿을 시 곧바로 Game Out‼<br>
-			    		처음부터 다시 시작해야 합니다😭
+			    		1. 게임 첫 실행 시 브라우저 보안 정책상 음악이 자동재생 되지 않습니다.<br>
+			    		=> 로딩중에 화면을 클릭하면 노래가 자동 재생됩니다.<br><br>
+			    		2. 화면 비율 조정을 통해 게임을 즐겨 주세요!!<br>
+			    		=> 화면 크기 제한이 있지만 비율이 맞지 않을 시 원활한 게임 플레이가 어렵습니다.<br><br>
+			    		3. 뒤로가기 앞으로 가기 버튼 사용은 자제해주세요!<br>
+			    		=> 버그를 방지하기 위함입니다.<br><br>
+			    		그럼 즐거운 플레이 하시길 바랍니다.
 			    	</h4>
-			    	<img class="rule_img ri1" src="img/rule/frame1.png">
-			    	<img class="rule_img ri2" src="img/rule/frame2.png">
 			    </div>
-			     <div id="rule2" class="rule">
-			    	<h3>선생님한테 들키면 안돼😱</h3><br>
-			    	<h4>
-			    		어떤 스테이지에서는 라이언 선생님이 돌아다니며 순찰을 하고있기 때문에 잘 피해다녀야해!!
-			    	</h4>
-			    	<img class="rule_img ri3"src="img/rule/teacher.png">	
-			    </div>
-			     <div id="rule3" class="rule">
+		     	<div id="rule2" class="rule">
 			    	<h3>나가는 문이 어디지?</h3><br>
 			    	<h4>
 			    		다음 스테이지로 가야하는데 어디로 나가야 하는지 모르겠다면<br>
@@ -87,49 +83,32 @@
 						<img class="rule_img ri2"src="icon/key.png">			
 			    	</h4>
 			    </div>
-			     <div id="rule4" class="rule">
-			    	<h3>보스 스테이지는 몬티 홀 문제😵</h3><br>
+	    	 	<div id="rule3" class="rule">
+			     	<h3>맵 곳곳에 있는 장애물을 피해서 학교를 탈출하자❗</h3>
 			    	<h4>
-			    		몬티 홀 문제는 미국 오락 프로그램에서 유래한 확률 문제 입니다.<br><br>
-			    		◾ 문 3개가 있는데 한 문 뒤에는 자동차가 있고 나머지 두 문 뒤에는 염소가 있습니다.<br>
-			    		◾ 참가자는 문을 하나를 선택하여 그 뒤에 있는 상품을 얻습니다.<br>
-			    		◾ 참가자가 어떤 문을 선택하면 사회자가 나머지 두 문 중에 염소가 있는 문 한개를 열어 참가자에게 그 문에 염소가 있다고 확인시켜 줍니다.<br><br>
-			    		그 후 참가자에게 닫혀있는 다른 문을 선택할 기회를 다시 한 번 줍니다.<br><br>
-			    		몬티 홀 문제에서는 문을 바꾸지 않았을 때 확률이 1/3<br>
-			    		바꾸었을 대 2/3으로 바꿨을 때 확률이 더 높다는 것입니다.
-
+			    		장애물에 닿을 시 곧바로 Game Out‼<br>
+			    		처음부터 다시 시작해야 합니다😭
 			    	</h4>
+			    	<img class="rule_img ri1" src="img/rule/frame1.png">
+			    	<img class="rule_img ri2" src="img/rule/frame2.png">
 			    </div>
-			</div>
-	    </div>
-	  </div>
+			     	<div id="rule4" class="rule">
+			    		<h3>보스 스테이지는 몬티 홀 문제😵</h3><br>
+				    	<h4>
+				    		몬티 홀 문제는 미국 오락 프로그램에서 유래한 확률 문제 입니다.<br><br>
+				    		◾ 문 3개가 있는데 한 문 뒤에는 자동차가 있고 나머지 두 문 뒤에는 염소가 있습니다.<br>
+				    		◾ 참가자는 문을 하나를 선택하여 그 뒤에 있는 상품을 얻습니다.<br>
+				    		◾ 참가자가 어떤 문을 선택하면 사회자가 나머지 두 문 중에 염소가 있는 문 한개를 열어 참가자에게 그 문에 염소가 있다고 확인시켜 줍니다.<br><br>
+				    		그 후 참가자에게 닫혀있는 다른 문을 선택할 기회를 다시 한 번 줍니다.<br><br>
+				    		몬티 홀 문제에서는 문을 바꾸지 않았을 때 확률이 1/3<br>
+				    		바꾸었을 대 2/3으로 바꿨을 때 확률이 더 높다는 것입니다.
+				    	</h4>
+				    </div>
+				</div>
+    		</div>
+	  	</div>
 	</div>
 </body>	
-<script>
-	let lastidx = 1
-
-	function select(idx){
-		/* 카테고리 up down 변경*/
-		document.body.querySelector(`#rule_btn${lastidx}`).classList.add("btn-down")		
-		document.body.querySelector(`#rule_btn${lastidx}`).classList.remove("btn-down")
-		document.body.querySelector(`#rule_btn${lastidx}`).classList.remove("btn-up")
-		document.body.querySelector(`#rule_btn${idx}`).classList.add("btn-up")
-		/* 카테고리에 따른 rule 내용 & 디자인 변경 */
-		document.body.querySelector(`#rule${lastidx}`).style.display = 'none'
-		document.body.querySelector(`#rule${idx}`).style.display = 'block'
-	
-		lastidx = idx
-	}
-
-	function gameStart(){
-		location.href="stages/stage1.html";
-	}
-
-	function gameRank(){
-		location.href="gameRank.html";
-	}
-
-	select(1)
-</script>
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/audio2.js"></script>
 </html>

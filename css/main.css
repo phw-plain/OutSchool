@@ -173,16 +173,16 @@ body{
     text-align: center;
 }
 .btn-color1{
-    border: 1px solid rgb(251, 245, 185);
-    background-color: rgb(251, 245, 185);
+    border: 1px solid rgb(188,241, 255);
+    background-color: rgb(188,241, 255);
 }
 .btn-color2{
     border: 1px solid rgb(229, 210, 232);
     background-color: rgb(229, 210, 232)
 }
 .btn-color3{
-    border: 1px solid rgb(188,241, 255);
-    background-color: rgb(188,241, 255);
+    border: 1px solid rgb(251, 245, 185);
+    background-color: rgb(251, 245, 185);
 }
 .btn-color4{
     border: 1px solid rgb(248, 197, 196);
@@ -215,7 +215,7 @@ body{
     }
 }
 #rule1{
-    background-color: rgb(251, 245, 185);
+    background-color: rgb(188,241, 255);
 }
 #rule2{
     display: none;
@@ -223,7 +223,7 @@ body{
 }
 #rule3{
     display: none;
-    background-color: rgb(188,241, 255);
+    background-color: rgb(251, 245, 185);
 }
 #rule4{
     display: none;
