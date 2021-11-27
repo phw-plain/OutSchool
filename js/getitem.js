@@ -18,13 +18,15 @@ function itemcheck() {
 }
 
 function open_box(position) {
-	stage = position
-    click.play()
-    if(stage == 5){
-    	document.body.querySelector('.box').src = '../icon/open_box.png'
+    if(check == 0){
+        stage = position
+        click.play()
+        if(stage == 5){
+            document.body.querySelector('.box').src = '../icon/open_box.png'
+        }
+        document.body.querySelector('.getitem').style.display = "block"
+        document.body.querySelector('.interaction').style.display = "block"
     }
-    document.body.querySelector('.getitem').style.display = "block"
-    document.body.querySelector('.interaction').style.display = "block"
 }
        
 function getitem(){

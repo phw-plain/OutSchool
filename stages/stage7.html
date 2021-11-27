@@ -1,78 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
     <title>OutSchool</title>
     <style>
-        body{
+        body {
             background-image: url("../img/stage7.png");
-        }
-        .bread{
-            width: 100px;
-            position: absolute;
-            left: 100px;
-            bottom: 450px;
-        }
-        .closet{
-            width: 500px;
-            position: absolute;
-            left: -100px;
-            bottom: 0px;
-        }
-        .startdoor{
-        width: 100px;
-        position: absolute;
-        right: 0px;
-        bottom: 10px;
-        }
-        .enddoor{
-        width: 100px;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        }
-        .trash{
-            width: 300px;
-            position: absolute;
-            right: 200px;
-            top: 200px;
-        }
-        .trash2{
-            width: 300px;
-            position: absolute;
-            right: 300px;
-            bottom: 100px;
-        }
-        .trash3{
-            width: 200px;
-            position: absolute;
-            right: 700px;
-            bottom: 200px;
-        }
-        .trash4{
-            width: 300px;
-            position: absolute;
-            right: 800px;
-            top: 100px;
-        }
-        .trash5{
-            width: 300px;
-            position: absolute;
-            right: 800px;
-            bottom: 0px;
         }
     </style>
 </head>
 <body>
-    <img class="bread" src="../icon/stage7/매점빵.png" >
-    <img class="closet"src="../icon/stage7/매점선반.png" >
-    <img class="startdoor" src="../icon/stage7/교무실문.png" >
-    <img class="enddoor" src="../icon/stage7/교무실문2.png" >
-    <img class="trash" src="../icon/stage7/쓰레기더미1.png" >
-    <img class="trash2" src="../icon/stage7/쓰레기더미2.png">
-    <img class="trash3" src="../icon/stage7/쓰레기더미1.png">
-    <img class="trash4" src="../icon/stage7/쓰레기더미2.png" >
-    <img class="trash5" src="../icon/stage7/쓰레기더미2.png" >
+    <div class="subtitle">
+        <div class="place p1">현재 위치</div>
+        <div class="place p2">매점</div>
+    </div>
+    <div class="next" onmouseover="(nextstage(8));" style="width: 80px; height: 100px;top: 40px; right: 0%"></div>
+    <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
+	<script type="text/javascript" src="../js/character.js"></script>
 </body>
 </html>

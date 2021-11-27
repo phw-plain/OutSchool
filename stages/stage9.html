@@ -1,81 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
     <title>OutSchool</title>
     <style>
-        body{
+        body {
             background-image: url("../img/stage9.png");
-        }
-        .ball{
-            width: 500px;
-            position: absolute;
-            bottom: 800px;
-            left: 800px;
-
-        }
-        .basket{
-            width: 1000px;
-            position: absolute;
-            bottom: 400px;
-            right: 100px;
-        }
-        .startdoor{
-        width: 400px;
-        position: absolute;
-        left: 0px;
-        bottom: 10px;
-        }
-        .enddoor{
-        width: 300px;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        }
-        .teacher{
-            width: 1000px;
-            position: absolute;
-            top: 300px;
-            right: 2000px;
-        }
-        .balls{
-            width: 1000px;
-            position: absolute;
-            bottom: 900px;
-            right: 800px;
-        }
-        .balls2{
-            width: 1000px;
-            position: absolute;
-            bottom: 0px;
-            left: 1200px;
-        }
-        .balls3{
-            width: 1000px;
-            position: absolute;
-            bottom: 1200px;
-            left: 1000px;
-        }
-        .balls4{
-            width: 1000px;
-            position: absolute;
-            bottom: 400px;
-            right: 2000px;
         }
     </style>
 </head>
 <body>
-    <img class="ball" src="../icon/stage9/체육관농구공.png" >
-    <img class="basket" src="../icon/stage9/농구골대.png" >
-    <img class="startdoor" src="../icon/stage9/교무실문.png" >
-    <img class="enddoor" src="../icon/stage9/교무실문2.png">
-    <img class="teacher" src="../icon/stage9/선생님.png">
-    <img class="balls" src="../icon/stage9/공들.png">
-    <img class="balls2" src="../icon/stage9/공들.png">
-    <img class="balls3" src="../icon/stage9/공들.png">
-    <img class="balls4" src="../icon/stage9/공들.png">
-
-
+    
+    <div class="next" onmouseover="nextstage(10);" style="width: 80px; height: 100px;top: 40px; right: 0%"></div>
+    <div class="subtitle">
+        <div class="place p1">현재 위치</div>
+        <div class="place p2">체육관</div>
+    </div>
+    <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
+	<script type="text/javascript" src="../js/character.js"></script>
 </body>
 </html>

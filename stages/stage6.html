@@ -1,72 +1,91 @@
-<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
+    <script type="text/javascript" src="../js/getitem.js"></script>
     <title>OutSchool</title>
     <style>
-    body{
-        background-image: url("../img/stage6.png");
-        background-size: cover;
-    }
-    .desk{
-        width:250px;
-        position:absolute;
-        top: 500px;
-    }
-    .key{
-        width: 100px;
-        position: absolute;
-        top: 50px;
-    }
-    .startdoor{
-        width: 100px;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
-    .enddoor{
-        width: 100px;
-        position: absolute;
-        right: 0px;
-        bottom: 10px;
-
-    }
-    .desk2{
-        width: 500px;
-        position: absolute;
-        right: 500px;
-        bottom: 500px;
-    }
-    .desk3{
-        width: 500px;
-        position: absolute;
-        left: 300px;
-        bottom: 500px;
-    }
-    .desk4{
-        width: 500px;
-        position: absolute;
-        right: 500px;
-        bottom: 100px;
-    }
-    .desk5{
-        width: 500px;
-        position: absolute;
-        left: 300px;
-        bottom: 100px;
-    }
-    
+        body {
+            background-image: url("../img/stage6.png");
+        }
+        .wall{
+            position: absolute;
+            border-left: 5px solid black;
+        }
+        .w1{
+            top: 0%;
+            left: 30%;
+            width: 10px;
+            height: 45%;
+        }
+        .w2{
+            bottom: 0%;
+            left: 30%;
+            width: 10px;
+            height: 30%;
+        }
+        .keybox{
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            width: 150px;
+            height: 150px;
+        }
+        .partition{
+            position: absolute;
+            top: 40%;
+            left: 0%;
+            width: 300px;
+            height: 250px;
+        }
+        .staffroom_desk{
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            width: 300px;
+            height: 300px;
+        }
+        .staffroom_desk2{
+            position: absolute;
+            top: 15%;
+            width: 300px;
+            height: 300px;
+        }
+        .staffroom_desk3{
+            position: absolute;
+            bottom: 0%;
+            width: 300px;
+            height: 300px;
+        }
+        .sdL{
+            left: 40%;
+        }
+        .sdR{
+            left: 60%;
+        }
     </style>
 </head>
 <body>
-    <img class="desk" src="../icon/stage6/교무실책상.png" >
-    <img class="key" src="../icon/stage6/교무실열쇠.png" >
-    <img class="startdoor" src="../icon/stage6/교무실문.png" >
-    <img class="enddoor" src="../icon/stage6/교무실문2.png" >
-    <img class="desk2" src="../icon/stage6/교무실책상2.png" >
-    <img class="desk3" src="../icon/stage6/교무실책상2.png" >
-    <img class="desk4" src="../icon/stage6/교무실책상2.png" >
-    <img class="desk5" src="../icon/stage6/교무실책상2.png" >
+    <div class="wall w1" onmouseover="die();"></div>
+    <div class="wall w2" onmouseover="die();"></div>
+    <img class="keybox" onmouseover="open_box(6)" src="../icon/stage6/keybox.png"/>
+    <img class="partition" src="../icon/stage6/partition.png" onmouseover="die();"/>
+    <img class="staffroom_desk" src="../icon/stage6/staffroom_desk.png" onmouseover="die();"/>
+    <img class="staffroom_desk2 sdL" src="../icon/stage6/staffroom_desk2.png" onmouseover="die();"/>
+    <img class="staffroom_desk2 sdR" src="../icon/stage6/staffroom_desk2.png" onmouseover="die();"/>
+    <img class="staffroom_desk3 sdL" src="../icon/stage6/staffroom_desk3.png" onmouseover="die();"/>
+    <img class="staffroom_desk3 sdR" src="../icon/stage6/staffroom_desk3.png" onmouseover="die();"/>
+    <div class="next" onmouseover="checkkey()" style="top: 850px; right: 3%;">next !!</div>
+    <div class="subtitle">
+        <div class="place p1">현재 위치</div>
+        <div class="place p2">교무실</div>
+    </div>
+    <div class="character"><img class="character_img" src="../icon/chracter.gif"></div> <div class="interaction"></div>
+    <div class="getitem">
+        <img class="key" src="../icon/key.png">
+        <p class="getitem_txt">열쇠 획득!!</p>
+        <button class="btn-ok" onclick="getitem()">확인</button>
+    </div>
+	<script type="text/javascript" src="../js/character.js"></script>
 </body>
 </html>
