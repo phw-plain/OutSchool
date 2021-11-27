@@ -5,75 +5,22 @@
 	<script type="text/javascript" src="js/audio.js"></script>
 	<title>OutSchool</title>
 	<style type="text/css">
-		.rule{
-			background-color: beige;
-			width: 800px;
-			height: 570px;
-		}
-		.rule-top{
+		.rule_img{
 			position: absolute;
-			top: 50px;
-			right: 60px;
+			width: 270px;
+			height: 310px;
 		}
-		.rule-bottom{
-			position: absolute;
-			top: 82px;
+		.ri1{
+			top: 40%;
+			left: 3.5%;
 		}
-		.rulebuttons{
-			color: black;
-			cursor: pointer;
-			display: flex;
-   			align-items: flex-end;
+		.ri2{
+			top: 10%;
+			right: 3.5%;
 		}
-		.btn-type{
-			width: 50px;
-			height: 50px;
-			display: inline-block;
- 			border-radius: 11px 11px 1px 1px;
- 			padding: 5px;
- 			text-align: center;
-		}
-		.btn-color1{
-			border: 1px solid beige;
- 			background-color: beige;
-		}
-		.btn-color2{
-			border: 1px solid green;
- 			background-color: green;
-		}
-		.btn-color3{
-			border: 1px solid yellow;
- 			background-color: yellow;
-		}
-		.btn-color4{
-			border: 1px solid blue;
- 			background-color: blue;
-		}
-		.btn-up{
-			-webkit-animation-name : animation_play1;
-			-webkit-animation-duration : 0.3s;
-			-webkit-animation-fill-mode:both;
-		}
-		.btn-down{
-			-webkit-animation-name : animation_play2;
-			-webkit-animation-duration : 0.3s;
-			-webkit-animation-fill-mode:both;
-		}
-		@-webkit-keyframes animation_play1 {
-			0% {
-				-webkit-transform : translateY(0px);
-			}
-			100% {
-				-webkit-transform : translateY(-20px);
-			}
-		}
-		@-webkit-keyframes animation_play2 {
-			0% {
-				-webkit-transform : translateY(-20px);
-			}
-			100% {
-				-webkit-transform : translateY(0px);
-			}
+		.ri3{
+			top: 30%;
+			right: 3.5%;
 		}
 	</style>
 </head>
@@ -103,19 +50,55 @@
 	<div class="box_modal">
 	  <label for="modal" class="closer">x</label>
 	  <div class="text">
-	    <h3>게임 방법</h3>
+	    <h2 style="margin:0;"">게임 방법</h2>
 	    <div>
 	    	<div class="rule-top">
 		    	<div class="rulebuttons">
-		    		<div onclick="select(1)" id="rule1" class="btn-type btn-color1">rule1</div>
-		    		<div onclick="select(2)" id="rule2" class="btn-type btn-color2">rule2</div>
-		    		<div onclick="select(3)" id="rule3" class="btn-type btn-color3">rule3</div>
-		    		<div onclick="select(4)" id="rule4" class="btn-type btn-color4">rule4</div>
+		    		<div onclick="select(1)" id="rule_btn1" class="btn-type btn-color1">장애물</div>
+		    		<div onclick="select(2)" id="rule_btn2" class="btn-type btn-color2">선생님</div>
+		    		<div onclick="select(3)" id="rule_btn3" class="btn-type btn-color3">열  쇠</div>
+		    		<div onclick="select(4)" id="rule_btn4" class="btn-type btn-color4">보  스</div>
 		    	</div>
 	    	</div>
 	    	<div class="rule-bottom">
-			    <div class="rule">
-			    	내용입니다.
+			    <div id="rule1" class="rule">
+			    	<h3>맵 곳곳에 있는 장애물을 피해서 학교를 탈출하자❗</h3>
+			    	<h4>
+			    		장애물에 닿을 시 곧바로 Game Out‼<br>
+			    		처음부터 다시 시작해야 합니다😭
+			    	</h4>
+			    	<img class="rule_img ri1" src="img/rule/frame1.png">
+			    	<img class="rule_img ri2" src="img/rule/frame2.png">
+			    </div>
+			     <div id="rule2" class="rule">
+			    	<h3>선생님한테 들키면 안돼😱</h3><br>
+			    	<h4>
+			    		어떤 스테이지에서는 라이언 선생님이 돌아다니며 순찰을 하고있기 때문에 잘 피해다녀야해!!
+			    	</h4>
+			    	<img class="rule_img ri3"src="img/rule/teacher.png">	
+			    </div>
+			     <div id="rule3" class="rule">
+			    	<h3>나가는 문이 어디지?</h3><br>
+			    	<h4>
+			    		다음 스테이지로 가야하는데 어디로 나가야 하는지 모르겠다면<br>
+			    		next 표시나 문을 잘 찾아봐!!<br><br>
+			    		다가 갔는데도 이동이 되지 않는다면 열쇠가 없기 때문이야!!<br>
+			    		특정 이벤트를 완료 하면 열쇠를 얻을 수 있어!
+						<img class="rule_img ri2"src="icon/key.png">			
+			    	</h4>
+			    </div>
+			     <div id="rule4" class="rule">
+			    	<h3>보스 스테이지는 몬티 홀 문제😵</h3><br>
+			    	<h4>
+			    		몬티 홀 문제는 미국 오락 프로그램에서 유래한 확률 문제 입니다.<br><br>
+			    		◾ 문 3개가 있는데 한 문 뒤에는 자동차가 있고 나머지 두 문 뒤에는 염소가 있습니다.<br>
+			    		◾ 참가자는 문을 하나를 선택하여 그 뒤에 있는 상품을 얻습니다.<br>
+			    		◾ 참가자가 어떤 문을 선택하면 사회자가 나머지 두 문 중에 염소가 있는 문 한개를 열어 참가자에게 그 문에 염소가 있다고 확인시켜 줍니다.<br><br>
+			    		그 후 참가자에게 닫혀있는 다른 문을 선택할 기회를 다시 한 번 줍니다.<br><br>
+			    		몬티 홀 문제에서는 문을 바꾸지 않았을 때 확률이 1/3<br>
+			    		바꾸었을 대 2/3으로 바꿨을 때 확률이 더 높다는 것입니다.
+
+			    	</h4>
 			    </div>
 			</div>
 	    </div>
@@ -123,17 +106,17 @@
 	</div>
 </body>	
 <script>
-	const color = new Array('beige', 'green', 'yellow', 'blue')
 	let lastidx = 1
 
 	function select(idx){
 		/* 카테고리 up down 변경*/
-		document.body.querySelector(`#rule${lastidx}`).classList.add("btn-down")		
-		document.body.querySelector(`#rule${lastidx}`).classList.remove("btn-down")
-		document.body.querySelector(`#rule${lastidx}`).classList.remove("btn-up")
-		document.body.querySelector(`#rule${idx}`).classList.add("btn-up")
-		/* 카테고리에 따른 rule main 디자인 변경 */
-		document.body.querySelector('.rule').style.backgroundColor = `${color[idx-1]}`
+		document.body.querySelector(`#rule_btn${lastidx}`).classList.add("btn-down")		
+		document.body.querySelector(`#rule_btn${lastidx}`).classList.remove("btn-down")
+		document.body.querySelector(`#rule_btn${lastidx}`).classList.remove("btn-up")
+		document.body.querySelector(`#rule_btn${idx}`).classList.add("btn-up")
+		/* 카테고리에 따른 rule 내용 & 디자인 변경 */
+		document.body.querySelector(`#rule${lastidx}`).style.display = 'none'
+		document.body.querySelector(`#rule${idx}`).style.display = 'block'
 	
 		lastidx = idx
 	}

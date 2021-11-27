@@ -128,6 +128,7 @@ body{
 }
 /* 팝업 내용 */
 .text {
+    user-select: none;
     height: 100%;
     margin-left:20px;
     margin-top:20px;
@@ -140,6 +141,93 @@ body{
 }
 .text p {
     font-size:13px;
+}
+.rule{
+    user-select: none;
+    width: 740px;
+    height: 520px;
+    padding: 30px;
+}
+.rule-top{
+    position: absolute;
+    top: 50px;
+    right: 60px;
+}
+.rule-bottom{
+    position: absolute;
+    top: 82px;
+}
+.rulebuttons{
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+}
+.btn-type{
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 11px 11px 1px 1px;
+    padding: 5px;
+    text-align: center;
+}
+.btn-color1{
+    border: 1px solid rgb(251, 245, 185);
+    background-color: rgb(251, 245, 185);
+}
+.btn-color2{
+    border: 1px solid rgb(229, 210, 232);
+    background-color: rgb(229, 210, 232)
+}
+.btn-color3{
+    border: 1px solid rgb(188,241, 255);
+    background-color: rgb(188,241, 255);
+}
+.btn-color4{
+    border: 1px solid rgb(248, 197, 196);
+    background-color: rgb(248, 197, 196);
+}
+.btn-up{
+    -webkit-animation-name : animation_play1;
+    -webkit-animation-duration : 0.3s;
+    -webkit-animation-fill-mode:both;
+}
+.btn-down{
+    -webkit-animation-name : animation_play2;
+    -webkit-animation-duration : 0.3s;
+    -webkit-animation-fill-mode:both;
+}
+@-webkit-keyframes animation_play1 {
+    0% {
+        -webkit-transform : translateY(0px);
+    }
+    100% {
+        -webkit-transform : translateY(-20px);
+    }
+}
+@-webkit-keyframes animation_play2 {
+    0% {
+        -webkit-transform : translateY(-20px);
+    }
+    100% {
+        -webkit-transform : translateY(0px);
+    }
+}
+#rule1{
+    background-color: rgb(251, 245, 185);
+}
+#rule2{
+    display: none;
+    background-color: rgb(229, 210, 232);
+}
+#rule3{
+    display: none;
+    background-color: rgb(188,241, 255);
+}
+#rule4{
+    display: none;
+    background-color: rgb(248, 197, 196);
 }
 /* 윈도우 팝업 소스 */
 input#modal[type=checkbox]:checked ~ .box_modal {
