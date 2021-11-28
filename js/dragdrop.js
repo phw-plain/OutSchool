@@ -1,17 +1,17 @@
-wastepaper.onmousedown = function(event) {
+dragitem.onmousedown = function(event) {
 
-    let shiftX = event.clientX - wastepaper.getBoundingClientRect().left;
-    let shiftY = event.clientY - wastepaper.getBoundingClientRect().top;
+    let shiftX = event.clientX - dragitem.getBoundingClientRect().left;
+    let shiftY = event.clientY - dragitem.getBoundingClientRect().top;
 
-    wastepaper.style.position = 'absolute';
-    wastepaper.style.zIndex = 1000;
-    document.body.append(wastepaper);
+    dragitem.style.position = 'absolute';
+    dragitem.style.zIndex = 1000;
+    document.body.append(dragitem);
 
     moveAt(event.pageX, event.pageY);
 
     function moveAt(pageX, pageY) {
-      wastepaper.style.left = pageX - shiftX + 'px';
-      wastepaper.style.top = pageY - shiftY + 'px';
+      dragitem.style.left = pageX - shiftX + 'px';
+      dragitem.style.top = pageY - shiftY + 'px';
     }
 
     function onMouseMove(event) {
@@ -20,13 +20,13 @@ wastepaper.onmousedown = function(event) {
 
     document.addEventListener('mousemove', onMouseMove);
 
-    wastepaper.onmouseup = function() {
+    dragitem.onmouseup = function() {
       document.removeEventListener('mousemove', onMouseMove);
-      wastepaper.onmouseup = null;
+      dragitem.onmouseup = null;
     };
 
 };
 
-wastepaper.ondragstart = function() {
+dragitem.ondragstart = function() {
     return false;
 };

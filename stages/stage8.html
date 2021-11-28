@@ -2,20 +2,36 @@
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
+    <script type="text/javascript" src="../js/erase.js"></script>
     <title>OutSchool</title>
     <style>
         body {
             background-image: url("../img/stage8.png");
+            margin: 0;
         }
     </style>
 </head>
-<body>
-    
-    <div class="next" onmouseover="nextstage(9);" style="width: 80px; height: 100px;top: 40px; right: 0%"></div>
+<body onload="ready()">
+    <img class="music_desk1" src="../icon/stage8/music_desk.png">
+    <img class="music_desk2 " src="../icon/stage8/music_desk.png">
+    <img class="bell b1" src="../icon/stage8/bell.png">
+    <img class="bell b2" src="../icon/stage8/bell.png">
+    <img class="bell b3" src="../icon/stage8/bell.png">
+    <img class="piano " src="../icon/stage8/piano.png">
+    <canvas id="canvas" width="1920" height="1700"></canvas>
+    <div class="diebox1" onmouseover="die();"></div>
+    <div class="diebox2" onmouseover="die();"></div>
+    <div class="diebox3" onmouseover="die();"></div>
+    <div class="diebox4" onmouseover="die();"></div>
+    <div class="diebox5" onmouseover="die();"></div>
+    <div class="diebox6_1" onmouseover="die();"></div>
+    <div class="diebox6_2" onmouseover="die();"></div>
+    <div class="diebox7" onmouseover="die();"></div>
     <div class="subtitle">
         <div class="place p1">현재 위치</div>
         <div class="place p2">음악실</div>
     </div>
+    <div class="next" onmouseover="nextstage(9);" style="width: 200px; height: 170px;top: 40px; right: 0%;"></div>
     <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>

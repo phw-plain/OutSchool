@@ -6,10 +6,29 @@
 	<title>OutSchool</title>
 	<style>
 		body{
-			background-color: black;
+			background-image: url('img/main.png');
 		}
 		a {
 			color: white;
+		}
+		.beener{
+		}
+		.benner_img{
+			position: absolute;
+			top: 20%;
+			left: 10%;
+		}
+		.benner_title{
+			position: absolute;
+			top: 25%;
+			left: 18%;
+			font-size: 20px;
+		}
+		.benner_txt{
+			position: absolute;
+			top: 35%;
+			left: 14%;
+			font-size: 20px;
 		}
 	</style>
 	<script>
@@ -36,5 +55,11 @@
 			<button class="button b"  onmouseenter="btnplayer()" onclick="gameHome()">메인으로</button>
 		</div>
 	</div>
+	<div class="benner">
+		<img class="benner_img" src="icon/benner.png">
+		<div class="benner_title">플레이 정보</div>
+		<div class="benner_txt">게임 플레이 시간 : 00분 00초</div>
+	</div>
+
 </body>
 </html>

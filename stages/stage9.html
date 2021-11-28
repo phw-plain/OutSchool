@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="../css/stage.css">
     <script type="text/javascript" src="../js/stage.js"></script>
+    <script type="text/javascript" src="../js/getitem.js"></script>
     <title>OutSchool</title>
     <style>
         body {
@@ -10,13 +11,31 @@
     </style>
 </head>
 <body>
-    
-    <div class="next" onmouseover="nextstage(10);" style="width: 80px; height: 100px;top: 40px; right: 0%"></div>
+    <h1 class="timer">00:30</h1>
+    <div class="score">
+        <img class="score_img" src="../icon/stage9/score.png"/>
+        <div class="score_txt">
+            <div id="score1">0</div>
+            <div id="score2">0</div>
+        </div>
+    </div>
+    <img class="ball" src="../icon/stage9/ball.png" id="dragitem">
+    <img class="goalpost1" src="../icon/stage9/goalpost.png" onmouseover="itemcheck(70, 130, 560, 650, 9)">
+    <img class="goalpost2" src="../icon/stage9/goalpost.png" onmouseover="itemcheck(1700, 1800, 560, 650, 9)">
     <div class="subtitle">
         <div class="place p1">현재 위치</div>
         <div class="place p2">체육관</div>
     </div>
+    <div class="next next_back" onmouseover="checkkey();" style="top: 270px; left: 0%">next !!</div>
     <div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
+    <div class="interaction"></div>
+    <div class="getitem">
+        <img class="key" src="../icon/key.png">
+        <p class="getitem_txt">열쇠 획득!!</p>
+        <button class="btn-ok" onclick="getitem()">확인</button>
+    </div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
+    <script type="text/javascript" src="../js/dragdrop.js"></script>
+    <script type="text/javascript" src="../js/timer.js"></script>
 </html>
