@@ -4,24 +4,16 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script type="text/javascript" src="js/audio.js"></script>
 	<script type="text/javascript" src="js/audio3.js"></script>
+	<script type="text/javascript" src="js/rank.js"></script>            
+	<script src="https://kit.fontawesome.com/f4dacc2b8e.js" crossorigin="anonymous"></script>
 	<title>OutSchool</title>
 	<style type="text/css">
-		.rule_img{
-			position: absolute;
-			width: 270px;
-			height: 310px;
+		.rank_border{
+			border: 5px solid #FFE650;
+			border-radius: 15px;
 		}
-		.ri1{
-			top: 40%;
-			left: 3.5%;
-		}
-		.ri2{
-			top: 10%;
-			right: 3.5%;
-		}
-		.ri3{
-			top: 30%;
-			right: 3.5%;
+		.trophy{
+			color: rgb(255, 215, 0);
 		}
 	</style>
 </head>
@@ -46,17 +38,15 @@
 			<label for="modal" class="button a"  onmouseenter="btnplayer()"><p style="margin-top: 20px">게임 방법</label>
 		</div>
 		<div class="menu">
-			<button class="button a" onmouseenter="btnplayer()" onclick="gameRank()">게임 랭킹</button>
+			<label for="modal2" class="button a"  onmouseenter="btnplayer()" onclick="Rank()"><p style="margin-top: 20px">게임  랭킹</label>
 		</div>
 	</div>
-
 	<input type="checkbox" id="modal" class="hidden">
 	<div class="box_modal">
-	  <label for="modal" class="closer">x</label>
-	  <div class="text">
-	    <h2 style="margin:0;"">게임 방법</h2>
-	    <div>
-	    	<div class="rule-top">
+		<label for="modal" class="closer">x</label>
+		<div class="text">
+	    	<h2 style="margin:0;">게임 방법</h2>
+    		<div class="rule-top">
 		    	<div class="rulebuttons">
 		    		<div onclick="select(1)" id="rule_btn1" class="btn-type btn-color1">주  의</div>
 		    		<div onclick="select(2)" id="rule_btn2" class="btn-type btn-color2">열  쇠</div>
@@ -97,23 +87,79 @@
 			    	<img class="rule_img ri1" src="img/rule/frame1.png">
 			    	<img class="rule_img ri2" src="img/rule/frame2.png">
 			    </div>
-			     	<div id="rule4" class="rule">
-			    		<h3>보스 스테이지는 몬티 홀 문제😵</h3><br>
-				    	<h4>
-				    		몬티 홀 문제는 미국 오락 프로그램에서 유래한 확률 문제 입니다.<br><br>
-				    		◾ 문 3개가 있는데 한 문 뒤에는 자동차가 있고 나머지 두 문 뒤에는 염소가 있습니다.<br>
-				    		◾ 참가자는 문을 하나를 선택하여 그 뒤에 있는 상품을 얻습니다.<br>
-				    		◾ 참가자가 어떤 문을 선택하면 사회자가 나머지 두 문 중에 염소가 있는 문 한개를 열어 참가자에게 그 문에 염소가 있다고 확인시켜 줍니다.<br><br>
-				    		그 후 참가자에게 닫혀있는 다른 문을 선택할 기회를 다시 한 번 줍니다.<br><br>
-				    		몬티 홀 문제에서는 문을 바꾸지 않았을 때 확률이 1/3<br>
-				    		바꾸었을 대 2/3으로 바꿨을 때 확률이 더 높다는 것입니다.
-				    	</h4>
-				    </div>
-				</div>
-    		</div>
+		     	<div id="rule4" class="rule">
+		    		<h3>보스 스테이지는 몬티 홀 문제😵</h3><br>
+			    	<h4>
+			    		몬티 홀 문제는 미국 오락 프로그램에서 유래한 확률 문제 입니다.<br><br>
+			    		◾ 문 3개가 있는데 한 문 뒤에는 자동차가 있고 나머지 두 문 뒤에는 염소가 있습니다.<br>
+			    		◾ 참가자는 문을 하나를 선택하여 그 뒤에 있는 상품을 얻습니다.<br>
+			    		◾ 참가자가 어떤 문을 선택하면 사회자가 나머지 두 문 중에 염소가 있는 문 한개를 열어 참가자에게 그 문에 염소가 있다고 확인시켜 줍니다.<br><br>
+			    		그 후 참가자에게 닫혀있는 다른 문을 선택할 기회를 다시 한 번 줍니다.<br><br>
+			    		몬티 홀 문제에서는 문을 바꾸지 않았을 때 확률이 1/3<br>
+			    		바꾸었을 대 2/3으로 바꿨을 때 확률이 더 높다는 것입니다.
+			    	</h4>
+			    </div>
+			</div>
 	  	</div>
+	</div>
+	<input type="checkbox" id="modal2" class="hidden">
+  	<div class="box_modal2">
+	  	<label for="modal2" class="closer2">x</label>
+    	<h1 class="ranking"><i class="fas fa-trophy trophy"></i> 게임 랭킹 <i class="fas fa-trophy trophy"></i></h1> 
+		<div class="rank rank_border">
+			<div class="rank_box">
+				<div class="rank_txt rt1"><i class="fas fa-crown" style="color: rgb(255, 215, 0);"></i></div>
+				<div id="rank1_name" class="rank_txt rt2">-- --</div>
+				<div id="rank1_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1"><i class="fas fa-crown" style="color: gray;"></i></div>
+				<div id="rank2_name" class="rank_txt rt2">-- --</div>
+				<div id="rank2_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1"><i class="fas fa-crown" style="color: brown;"></i></div>
+				<div id="rank3_name" class="rank_txt rt2">-- --</div>
+				<div id="rank3_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1">4.</div>
+				<div id="rank4_name" class="rank_txt rt2">-- --</div>
+				<div id="rank4_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1">5.</div>
+				<div id="rank5_name" class="rank_txt rt2">-- --</div>
+				<div id="rank5_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1">6.</div>
+				<div id="rank6_name" class="rank_txt rt2">-- --</div>
+				<div id="rank6_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1">7.</div>
+				<div id="rank7_name" class="rank_txt rt2">-- --</div>
+				<div id="rank7_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1">8.</div>
+				<div id="rank8_name" class="rank_txt rt2">-- --</div>
+				<div id="rank8_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1">9.</div>
+				<div id="rank9_name" class="rank_txt rt2">-- --</div>
+				<div id="rank9_time" class="rank_txt rt3">-- --</div>
+			</div>
+			<div class="rank_box">
+				<div class="rank_txt rt1">10.</div>
+				<div id="rank10_name" class="rank_txt rt2">-- --</div>
+				<div id="rank10_time" class="rank_txt rt3">-- --</div>
+			</div>
+		</div>
 	</div>
 </body>	
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/audio2.js"></script>
+<script type="text/javascript" src="js/audio2.js"></script>s
 </html>

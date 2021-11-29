@@ -2,153 +2,20 @@
 <html>
 <head>
 	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/rank.js"></script>
 	<script type="text/javascript" src="js/audio3.js"></script>
 	<title>OutSchool</title>
 	<style>
 		body{
-			background-image: url('img/main.png');
-		}
-		a {
-			color: white;
-		}
-		.beener{
-		}
-		.benner_img{
-			position: absolute;
-			top: 20%;
-			left: 10%;
-		}
-		.benner_title{
-			position: absolute;
-			top: 25%;
-			left: 18%;
-			font-size: 20px;
-		}
-		.benner_txt{
-			position: absolute;
-			display: inline-flex;
-			top: 35%;
-			left: 14%;
-			font-size: 20px;
-		}
-		.input{
-			position: absolute;
-			top: 50%;
-			left: 15%;
-		}
-		.btn{
-			position: absolute;
-			left: 22%;
-		 	margin-top: 30px;
-		    width: 130px;
-		    height: 45px;
-		    font-size: 18px;
-		    font-weight: 500;
-		    color: #000;
-		    background-color: #fff;
-		    border: none;
-		    border-radius: 45px;
-		    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-		    transition: all 0.3s ease 0s;
-		    cursor: pointer;
-		}
-		.btn:hover{
-		    color: white;
-		    background-color: #2EE59D;
+			background-image: url('img/gameclear.png');
 		}
 	</style>
 <script>
-let today
-let time = ""
-let t_check = 0
-window.onload = function() {
-	today = new Date()
-	window.parent.postMessage({ hello: '' }, '*');
-	clearTime()
-};
-
-let keys = localStorage.getItem('keys')
-function setScore(){
-	ready()
-	const name = document.getElementById("name").value
-
-    if(localStorage.getItem(name)==null && name != '' && t_check == 0){
-    	t_check++
-    	keys.push(name)
-    	localStorage.setItem('keys', keys)
-        localStorage.setItem(name, time)
-   		console.log(`이름 : ${name}, 플레이 타임 : ${time}`)
-   		console.log(localStorage.getItem('keys'))
-    } else if(name == ''){
-		alert(`이름을 입력해주세요.`)
-    } else if(t_check != 0){
-		alert(`이미 점수를 등록하셧습니다.`)
-    }
-    else {
-        alert(`이미 ${name}이 존재합니다. 다른 이름을 입력해 주세요.`)
-    }
-
-}
-
-function clearTime(){
-	let startM = +localStorage.getItem('minutes')
-	let startS = +localStorage.getItem('seconds')
-	let endM = today.getMinutes()
-	let endS = today.getSeconds()
-	let M = endM - startM
-	let S = endS - startS
-	if(S < 0){
-		M -= 1
-		S += 60
-	}
-    time += `${M<10 ? `0${M}`:M}:`
-    time += `${S<10 ? `0${S}`:S}`
-    
-    let txt = time.replace(":", "분 ")
-    txt += '초'
- 	const cleartime = document.querySelector('.cleartime').innerHTML = txt
-}
-
-function Rank(){
-	ready()
-	let scores = new Array()
-	for(let i=0; i<keys.length; i++){
-		let score = localStorage.getItem(keys[i])
-		score = score.split(':')
-		score[0] = +score[0]
-		score[1] = +score[1]
-		scores.push(score[0]*60 + score[1])
-	}
-	console.log(scores)
-	let rank = new Array()
-	for(let i=0; i<keys.length; i++){
-		let min = 0
-		for(let j=0; j<keys.length; j++){
-			if(scores[min] > scores[j]) {
-				min = j
-			}
-		}
-		scores[min] = 100000
-		rank.push(min)
-	}
-	console.log(rank)
-	let len = (rank.length > 10) ? 10 : rank.length
-	for(let i=0; i<len; i++){
-		console.log(`${i+1}. ${keys[rank[i]]}  ${localStorage.getItem(keys[[rank[i]]])}`)
-	}
-}
-
-function ready(){
-	if(keys == null)
-		keys = new Array()
-	else if(typeof(keys) == typeof(''))
-		keys = keys.split(',')
-}
 </script>
 </head>
 <body >
 	<h1 class="name">
-		<p style="color: green;">GameClear</p>
+		<p style="color: #2EE59D;">GameClear</p>
 	</h1>
 	<div class="menus">
 		<div class="menu">

@@ -15,8 +15,8 @@ body{
 	transform: translate(-50%, -50%);
 }
 .character_img{
-	width: 120px;
-	height: 200px;
+	width: 100px;
+	height: 180px;
 }
 /* 현재 위치 - stage 화면 좌측 상단*/
 .subtitle{

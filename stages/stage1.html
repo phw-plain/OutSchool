@@ -6,9 +6,10 @@
 	<title>OutSchool</title>
 	<script>
 		window.onload = function() {
-			let today = new Date()
-			localStorage.setItem('minutes', today.getMinutes())
-			localStorage.setItem('seconds', today.getSeconds())
+			let start = new Date()
+			localStorage.setItem('startH', start.getHours())
+			localStorage.setItem('startM', start.getMinutes())
+			localStorage.setItem('startS', start.getSeconds())
 			window.parent.postMessage({ hello: 'mp3/stagebgm2.mp3' }, '*');
 		};
 	</script>

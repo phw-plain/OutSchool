@@ -61,6 +61,23 @@ body{
     cursor: pointer;
     outline: none;
 }
+.button2{
+    width: 140px;
+    height: 45px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
 .a:hover {
     background-color: #2EE59D;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
@@ -71,6 +88,12 @@ body{
     background-color: #FFE650;
     box-shadow: 0px 15px 20px rgba(229, 217, 46, 0.4);
     color: #fff;
+    transform: translateY(-7px);
+}
+.c:hover {
+    background-color: rgb(211, 211, 211);
+    box-shadow: 0px 15px 20px rgba(211, 211, 211, 0.4);
+    color: black;
     transform: translateY(-7px);
 }
 .wrap {
@@ -85,12 +108,12 @@ body{
   padding-top:55px;
 }
 /* 팝업 */
-.box_modal {
+.box_modal{
     position: fixed;
     display:block;
     width:900px;
     height:700px;
-    top:15%;
+    top:20%;
     left:50%;
     margin-top:-75px;
     margin-left:-450px;
@@ -113,8 +136,37 @@ body{
     -ms-transform: scale(0, 0);
     transform: scale(0, 0);
 }
+.box_modal2{
+    position: fixed;
+    display:block;
+    width:700px;
+    height:700px;
+    top:20%;
+    left:55%;
+    transform: translate(-50%, -50%);
+    margin-top:-75px;
+    margin-left:-450px;
+    background:#d9e5e9;
+    border:1px solid #386980;
+    overflow:hidden;
+    /* 디자인 효과*/
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* 애니메이션 효과*/
+    visibility: collapse;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
 /* 팝업 닫기 버튼 */
-.closer {
+.closer, .closer2 {
     position:absolute;
     width:30px;
     height:30px;
@@ -144,6 +196,7 @@ body{
 .text p {
     font-size:13px;
 }
+
 .rule{
     user-select: none;
     width: 740px;
@@ -164,6 +217,23 @@ body{
     cursor: pointer;
     display: flex;
     align-items: flex-end;
+}
+.rule_img{
+    position: absolute;
+    width: 270px;
+    height: 310px;
+}
+.ri1{
+    top: 40%;
+    left: 3.5%;
+}
+.ri2{
+    top: 10%;
+    right: 3.5%;
+}
+.ri3{
+    top: 30%;
+    right: 3.5%;
 }
 .btn-type{
     user-select: none;
@@ -246,6 +316,87 @@ input#modal2[type=checkbox]:checked ~ .box_modal2 {
 }
 .hidden{
     display: none;
+}
+/* GameClear */
+.beener{
+}
+.benner_img{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.benner_title{
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    font-size: 20px;
+}
+.benner_txt{
+    position: absolute;
+    display: inline-flex;
+    top: 35%;
+    left: 14%;
+    font-size: 20px;
+}
+.input{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+.btn{
+    position: absolute;
+    left: 22%;
+    margin-top: 30px;
+    width: 130px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.btn:hover{
+    color: white;
+    background-color: #2EE59D;
+}
+/* GameRank */
+.ranking{
+    margin-top: 50px; 
+    text-align: center;
+}
+.rank{
+    width: 500px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 8%;
+    margin-right: 20%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+.rank_box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rt1{
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 25px;
+    float: left;
+}
+.rt2{
+    width: 150px;
+    float: left;
+}
+.rt3{
+    margin-right: 10%;
+    width: 100px;
+    float: right;
 }
 /* font */
 @font-face {
