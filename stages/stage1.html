@@ -6,6 +6,9 @@
 	<title>OutSchool</title>
 	<script>
 		window.onload = function() {
+			let today = new Date()
+			localStorage.setItem('minutes', today.getMinutes())
+			localStorage.setItem('seconds', today.getSeconds())
 			window.parent.postMessage({ hello: 'mp3/stagebgm2.mp3' }, '*');
 		};
 	</script>
@@ -45,7 +48,7 @@
 		<div class="desk" onmouseover="die()"><img class="img_desk" src="../icon/desk.png" /></div>
 	</div>
 	
-	<div class="character"><img class="character_img" src="../icon/chracter.gif"></div>
+	<div class="character"><img class="character_img" src="../icon/character.gif"></div>
 	<script type="text/javascript" src="../js/character.js"></script>
 </body>
 </html>

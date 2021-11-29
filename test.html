@@ -1,0 +1,70 @@
+<script type="text/javascript">
+let keys = localStorage.getItem('keys')
+console.log(localStorage.getItem('keys'))
+function setScore(){
+	ready()
+	const name = document.getElementById("name").value
+	const score = document.getElementById("time").value
+
+
+    if(localStorage.getItem(name)==null){
+    	keys.push(name)
+    	localStorage.setItem('keys', keys)
+        localStorage.setItem(name,score)
+   		console.log(`이름 : ${name}, 플레이 타임 : ${score}`)
+   		console.log(localStorage.getItem('keys'))
+
+    }else{
+        alert(`이미 ${name}이 존재합니다. 다른 이름을 입력해 주세요.`)
+    }
+
+}
+
+function Rank(){
+	ready()
+	let scores = new Array()
+	for(let i=0; i<keys.length; i++){
+		let score = localStorage.getItem(keys[i])
+		score = score.split(':')
+		score[0] = +score[0]
+		score[1] = +score[1]
+		scores.push(score[0]*60 + score[1])
+	}
+	console.log(scores)
+	let rank = new Array()
+	for(let i=0; i<keys.length; i++){
+		let min = 0
+		for(let j=0; j<keys.length; j++){
+			if(scores[min] > scores[j]) {
+				min = j
+			}
+		}
+		scores[min] = 100000
+		rank.push(min)
+	}
+	console.log(rank)
+	let len = (rank.length > 10) ? 10 : rank.length
+	for(let i=0; i<len; i++){
+		console.log(`${i+1}. ${keys[rank[i]]}  ${localStorage.getItem(keys[[rank[i]]])}`)
+	}
+}
+
+function ready(){
+	if(keys == null)
+		keys = new Array()
+	else if(typeof(keys) == typeof(''))
+		keys = keys.split(',')
+}
+
+</script>
+<body>
+	<form action="javascript:setScore()" method="post">
+	  <input type="text" id="name" placeholder="이름 입력"><br>
+	  <input type="text" id="time" placeholder="시간 입력 ex) 40:00">
+	  <input type="submit" value="Click">
+	</form>
+
+	<form action="javascript:Rank()" method="post">
+		<input type="submit" value="rank">
+	</form>
+</body>

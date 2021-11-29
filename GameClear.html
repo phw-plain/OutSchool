@@ -26,24 +26,139 @@
 		}
 		.benner_txt{
 			position: absolute;
+			display: inline-flex;
 			top: 35%;
 			left: 14%;
 			font-size: 20px;
 		}
+		.input{
+			position: absolute;
+			top: 50%;
+			left: 15%;
+		}
+		.btn{
+			position: absolute;
+			left: 22%;
+		 	margin-top: 30px;
+		    width: 130px;
+		    height: 45px;
+		    font-size: 18px;
+		    font-weight: 500;
+		    color: #000;
+		    background-color: #fff;
+		    border: none;
+		    border-radius: 45px;
+		    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+		    transition: all 0.3s ease 0s;
+		    cursor: pointer;
+		}
+		.btn-ok:hover{
+		    color: white;
+		    background-color: #2EE59D;
+		} 
+		.btn-ok:active{
+		    color: white;
+		    background-color: rgb(23, 185, 120);
+		}
 	</style>
-	<script>
-		window.onload = function() {
-			window.parent.postMessage({ hello: '' }, '*');
-		};
-		function gameStart(){
-			location.href="stages/stage1.html";
+<script>
+let today
+let time = ""
+let t_check = 0
+window.onload = function() {
+	today = new Date()
+	window.parent.postMessage({ hello: '' }, '*');
+	clearTime()
+};
+
+let keys = localStorage.getItem('keys')
+function setScore(){
+	ready()
+	const name = document.getElementById("name").value
+
+    if(localStorage.getItem(name)==null && name != '' && t_check == 0){
+    	t_check++
+    	keys.push(name)
+    	localStorage.setItem('keys', keys)
+        localStorage.setItem(name, time)
+   		console.log(`이름 : ${name}, 플레이 타임 : ${time}`)
+   		console.log(localStorage.getItem('keys'))
+    } else if(name == ''){
+		alert(`이름을 입력해주세요.`)
+    } else if(t_check != 0){
+		alert(`이미 점수를 등록하셧습니다.`)
+    }
+    else {
+        alert(`이미 ${name}이 존재합니다. 다른 이름을 입력해 주세요.`)
+    }
+
+}
+
+function clearTime(){
+	let startM = +localStorage.getItem('minutes')
+	let startS = +localStorage.getItem('seconds')
+	let endM = today.getMinutes()
+	let endS = today.getSeconds()
+	let M = endM - startM
+	let S = endS - startS
+	if(S < 0){
+		M -= 1
+		S += 60
+	}
+    time += `${M<10 ? `0${M}`:M}:`
+    time += `${S<10 ? `0${S}`:S}`
+    
+    let txt = time.replace(":", "분 ")
+    txt += '초'
+ 	const cleartime = document.querySelector('.cleartime').innerHTML = txt
+}
+
+function Rank(){
+	ready()
+	let scores = new Array()
+	for(let i=0; i<keys.length; i++){
+		let score = localStorage.getItem(keys[i])
+		score = score.split(':')
+		score[0] = +score[0]
+		score[1] = +score[1]
+		scores.push(score[0]*60 + score[1])
+	}
+	console.log(scores)
+	let rank = new Array()
+	for(let i=0; i<keys.length; i++){
+		let min = 0
+		for(let j=0; j<keys.length; j++){
+			if(scores[min] > scores[j]) {
+				min = j
+			}
 		}
-		function gameHome(){
-			location.href="GameStart.html";
-		}
-	</script>
+		scores[min] = 100000
+		rank.push(min)
+	}
+	console.log(rank)
+	let len = (rank.length > 10) ? 10 : rank.length
+	for(let i=0; i<len; i++){
+		console.log(`${i+1}. ${keys[rank[i]]}  ${localStorage.getItem(keys[[rank[i]]])}`)
+	}
+}
+
+function ready(){
+	if(keys == null)
+		keys = new Array()
+	else if(typeof(keys) == typeof(''))
+		keys = keys.split(',')
+}
+
+function gameStart(){
+	location.href="stages/stage1.html";
+}
+
+function gameHome(){
+	location.href="GameStart.html";
+}
+</script>
 </head>
-<body>
+<body >
 	<h1 class="name">
 		<p style="color: green;">GameClear</p>
 	</h1>
@@ -58,7 +173,11 @@
 	<div class="benner">
 		<img class="benner_img" src="icon/benner.png">
 		<div class="benner_title">플레이 정보</div>
-		<div class="benner_txt">게임 플레이 시간 : 00분 00초</div>
+		<div class="benner_txt">게임 플레이 시간 : <div class="cleartime">00분 00초</div></div>
+		<form class="input" action="javascript:setScore()" method="post">
+		  이름 <input type="text" id="name" placeholder="입력"><br>
+		  <input class="btn" type="submit" value="확인">
+		</form>
 	</div>
 
 </body>

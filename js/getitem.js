@@ -35,6 +35,17 @@ function itemcheck(x1 = 0, x2 = 0, y1 = 0, y2 = 0, position) {
     }
 }
 
+
+function dresschange(){
+    document.body.querySelector('.cimg1').style.display = "none"
+    document.body.querySelector('.cimg2').style.display = "block"
+    const s1 = document.querySelector('#score1');
+    const s2 = document.querySelector('#score2');
+    s1.innerHTML = `${score1<10 ? `0${score1}`:score1}`
+    s2.innerHTML = `${score2<10 ? `0${score2}`:score2}`
+    init();
+}
+
 function open_box(position) {
     if(check == 0){
         stage = position
