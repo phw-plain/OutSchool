@@ -31,9 +31,23 @@
 			box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 		}
 		.rank_box{
-			display: flex;
-			justify-content: space-evenly;
-   			align-items: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.rt1{
+			margin-left: 10%;
+			margin-right: 10%;
+			width: 25px;
+			float: left;
+		}
+		.rt2{
+			width: 150px;
+			float: left;
+		}
+		.rt3{
+			margin-right: 10%;
+			width: 100px;
+			float: right;
 		}
 	</style>
 	<script type="text/javascript">
@@ -41,63 +55,65 @@
 	</script>
 </head>
 <body>
-	<div class="main">
-		<h1 class="name">
-			<p class="name1">Game</p>
-			<p class="name2">Rank</p>
-		</h1> 
-		<div class="rank">
-			<div class="rank_box">
-				<p class="rank_txt">1.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">2.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">3.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">4.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">5.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">6.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">7.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">8.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">9.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
-			<div class="rank_box">
-				<p class="rank_txt">10.</p>
-				<p class="rank_txt">abcde<p>
-				<p class="rank_txt">30:00</p>
-			</div>
+	<h1 class="name">
+		<p class="name1">Game</p>
+		<p class="name2">Rank</p>
+	</h1> 
+	<div class="rank">
+		<div class="rank_box">
+			<div class="rank_txt rt1">1.</div>
+			<div class="rank_txt rt3">기록 없음</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">2.</div>
+			<div class="rank_txt rt3">기록 없음</div>
+			<div class="rank_txt rt2">나는야 뽀로로</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">3.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">4.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">5.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">6.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">7.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">8.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">9.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
+		</div>
+		<div class="rank_box">
+			<div class="rank_txt rt1">10.</div>
+			<div class="rank_txt rt2">앙드레이아</div>
+			<div class="rank_txt rt3">기록 없음</div>
 		</div>
 	</div>
+	<div class="menu" style="margin-top: 50px;">
+		<button class="button a"  onmouseenter="btnplayer()" onclick="gameHome()">메인으로</button>
+	</div>
 </body>
+<script type="text/javascript" src="js/main.js"></script>
 </html>

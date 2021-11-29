@@ -210,6 +210,19 @@ body{
     top: 70%;
     left: 44%;
 }
+.back{
+    width: 300px;
+    position: absolute;
+    bottom: 200px;
+    right: 400px;
+
+}
+.trash4{
+    width: 200px;
+    position: absolute;
+    bottom: 280px;
+    left: 350px;
+}
 /* stage 5 */
 .blind{
     opacity:0;

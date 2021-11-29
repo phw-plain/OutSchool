@@ -21,4 +21,9 @@ function gameRank(){
 	location.href="gameRank.html";
 }
 
+function gameHome(){
+	window.parent.postMessage({ hello: '' }, '*');
+	location.href="GameStart.html";
+}
+
 select(1)

@@ -52,13 +52,9 @@
 		    transition: all 0.3s ease 0s;
 		    cursor: pointer;
 		}
-		.btn-ok:hover{
+		.btn:hover{
 		    color: white;
 		    background-color: #2EE59D;
-		} 
-		.btn-ok:active{
-		    color: white;
-		    background-color: rgb(23, 185, 120);
 		}
 	</style>
 <script>
@@ -148,14 +144,6 @@ function ready(){
 	else if(typeof(keys) == typeof(''))
 		keys = keys.split(',')
 }
-
-function gameStart(){
-	location.href="stages/stage1.html";
-}
-
-function gameHome(){
-	location.href="GameStart.html";
-}
 </script>
 </head>
 <body >
@@ -179,6 +167,6 @@ function gameHome(){
 		  <input class="btn" type="submit" value="확인">
 		</form>
 	</div>
-
 </body>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
