@@ -53,7 +53,7 @@ function clearCheck(){
 		document.body.querySelector(`#door${answer}`).setAttribute('onmouseover', 'Clear()')
 	} else {
 		alert(`정답은 ${answer}!! 당신은 도전에 실패하였습니다.`)
-		location.href="../GameOver.html"
+		location.replace("../GameOver.html")
 	}
 }
 
@@ -68,5 +68,5 @@ function memoOff(){
 }
 
 function Clear(){
-	location.href = '../GameClear.html'
+	location.replace('../GameClear.html')
 }

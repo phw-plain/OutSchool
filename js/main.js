@@ -14,16 +14,12 @@ function select(idx){
 }
 
 function gameStart(){
-	location.href="stages/stage1.html";
-}
-
-function gameRank(){
-	location.href="gameRank.html";
+	location.replace("stages/stage1.html")
 }
 
 function gameHome(){
 	window.parent.postMessage({ hello: '' }, '*');
-	location.href="GameStart.html";
+	location.replace("GameStart.html")
 }
 
 select(1)
