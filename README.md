@@ -4,6 +4,22 @@
 
 * 기획 · 개발 · 디자인 기간 : 2021.11.02 ~ 2021.11.30
 
+
+### SCREENSHOT
+``` 메인 화면 ```
+![main](https://user-images.githubusercontent.com/79081836/163761669-8a02edbc-eaea-45bc-9ffe-646aa2b623fe.PNG)
+
+``` 게임 방법 ```
+![게임방법 1](https://user-images.githubusercontent.com/79081836/163761675-734372cb-2f87-4e9d-ad19-72eff3e29dd4.PNG)
+
+``` 게임 랭킹 ```
+![게임랭킹](https://user-images.githubusercontent.com/79081836/163761680-65833c27-b5e8-42c6-a387-6eb53a96688d.PNG)
+
+``` 게임 오버 & 클리어 ```
+![게임 오버](https://user-images.githubusercontent.com/79081836/163761689-a40cd2d0-d80e-451c-bc6a-15cec097d328.PNG)
+![게임클리어](https://user-images.githubusercontent.com/79081836/163761694-5a28aacf-ad24-42d5-ae98-d0923bb960d1.PNG)
+
+
 ### STAGE
 ```stage1``` : 곳곳의 장애물과 선생님을 피해 교실 밖으로 나가야 한다. 장애물에 닫으면 게임 오버된다.
 ![stage1](https://user-images.githubusercontent.com/79081836/150797028-48f13f9b-5af2-4186-a077-93923d31add7.PNG)
