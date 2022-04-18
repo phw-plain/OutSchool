@@ -8,7 +8,7 @@ var ready = function(){
  canvas.onmousedown = drawStart;
  canvas.onmousemove = drawing;
  
- ctx.fillRect(0, 0, 1920, 1700)
+ ctx.fillRect(0, 0, 3000, 1700)
 }
 
 var drawStart = function(event){
